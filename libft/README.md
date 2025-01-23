@@ -88,7 +88,6 @@ This will generate `libft.a`, a static library that you can link to your own pro
 libft/
 ├── includes/          # Header files (libft.h)
 ├── srcs/              # Source files
-├── obj/               # Object files (generated after compilation)
 ├── Makefile           # Build instructions
 ├── libft.a            # Static library (generated after compilation)
 └── README.md          # Project documentation
