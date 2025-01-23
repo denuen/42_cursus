@@ -56,8 +56,8 @@ While it sacrifices some efficiency compared to the optimized versions in the st
 
 Clone the repository:
 ```bash
-git clone https://github.com/deunen/libft.git
-cd libft
+git clone https://github.com/deunen/42_cursus.git
+cd 42_cursus/libft
 ```
 
 Build the library:
