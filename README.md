@@ -1,58 +1,58 @@
-# **:sparkles: libft :sparkles:**
+# libft
 A custom implementation of a utility library in C, recreating some of the most common functions from the standard C library, along with additional helpful functions.
 
 ---
 
-## **:book: Table of Contents**
-1. [:question: What is libft?](#what-is-libft)
-2. [:zap: Features](#features)
-3. [:clipboard: Functions List](#functions-list)
-4. [:wrench: Installation](#installation)
-5. [:computer: Usage](#usage)
-6. [:file_folder: File Structure](#file-structure)
-7. [:trophy: Credits](#credits)
+## Table of Contents
+1. [What is libft?](#what-is-libft)
+2. [Features](#features)
+3. [Functions List](#functions-list)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [File Structure](#file-structure)
+7. [Credits](#credits)
 
 ---
 
-## **:question: What is libft?**  
+## What is libft?  
 `libft` is a C library that reimplements several standard library functions, as well as additional utilities that simplify working with strings, memory, file descriptors, and linked lists.  
 While it sacrifices some efficiency compared to the optimized versions in the standard library, it provides safeguards for compilation errors and memory leaks, and all the code complies with the formatting standards of **42 School**'s `norminette`.
 
 ---
 
-## **:zap: Features**  
-- :heavy_check_mark: Reimplementation of standard C library functions (e.g., `atoi`, `memcpy`, `strlen`)
-- :heavy_check_mark: Memory management helpers (e.g., `calloc`, `bzero`)
-- :heavy_check_mark: String manipulation utilities (e.g., `strjoin`, `split`)
-- :heavy_check_mark: File descriptor management (e.g., `get_next_line`, `putchar_fd`)
-- :heavy_check_mark: Custom linked list functions for dynamic data structures
-- :heavy_check_mark: Compliant with the 42 School `norminette` standards
+## Features  
+- Reimplementation of standard C library functions (e.g., `atoi`, `memcpy`, `strlen`)
+- Memory management helpers (e.g., `calloc`, `bzero`)
+- String manipulation utilities (e.g., `strjoin`, `split`)
+- File descriptor management (e.g., `get_next_line`, `putchar_fd`)
+- Custom linked list functions for dynamic data structures
+- Compliant with the 42 School `norminette` standards
 
 ---
 
-## **:clipboard: Functions List**  
+## Functions List  
 
-### **:memo: Standard C Library Functions**
+### Standard C Library Functions
 - Memory functions: `ft_memset`, `ft_memcpy`, `ft_memmove`, `ft_memcmp`, `ft_memchr`
 - String functions: `ft_strlen`, `ft_strdup`, `ft_strncmp`, `ft_strchr`, `ft_strrchr`, `ft_strlcpy`, `ft_strlcat`
 - Character checks and transformations: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`
 
-### **:star2: Additional Utility Functions**
+### Additional Utility Functions
 - String utilities: `ft_split`, `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_strmapi`, `ft_striteri`
 - Number utilities: `ft_atoi`, `ft_itoa`
 - Output functions: `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
 
-### **:link: Bonus: Linked List Functions**
+### Bonus: Linked List Functions
 - `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstsize`, `ft_lstlast`
 - `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`
 
-### **:gear: Advanced Utilities**
+### Advanced Utilities
 - `get_next_line` and its bonus versions for reading files line by line
 - `ft_printf` for formatted output
 
 ---
 
-## **:wrench: Installation**  
+## Installation  
 
 Clone the repository:
 ```bash
@@ -69,7 +69,7 @@ This will generate `libft.a`, a static library that you can link to your own pro
 
 ---
 
-## **:computer: Usage**  
+## Usage  
 
 1. Include `libft.h` in your C files:
    ```c
@@ -83,7 +83,7 @@ This will generate `libft.a`, a static library that you can link to your own pro
 
 ---
 
-## **:file_folder: File Structure**  
+## File Structure  
 ```
 libft/
 ├── includes/          # Header files (libft.h)
@@ -96,8 +96,8 @@ libft/
 
 ---
 
-## **:trophy: Credits**  
-Developed by [Your Name](https://github.com/deunen) as part of the 42 School curriculum.  
+## Credits  
+Developed by [deunen](https://github.com/deunen) as part of the 42 School curriculum.  
 Special thanks to the 42 community for guidance and inspiration.
 
 ---
