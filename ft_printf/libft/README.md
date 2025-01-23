@@ -24,7 +24,7 @@ While it sacrifices some efficiency compared to the optimized versions in the st
 - Reimplementation of standard C library functions (e.g., `atoi`, `memcpy`, `strlen`)
 - Memory management helpers (e.g., `calloc`, `bzero`)
 - String manipulation utilities (e.g., `strjoin`, `split`)
-- File descriptor management (e.g., `get_next_line`, `putchar_fd`)
+- File descriptor management (e.g., `putstr_fd`, `putchar_fd`)
 - Custom linked list functions for dynamic data structures
 - Compliant with the 42 School `norminette` standards
 
@@ -46,18 +46,14 @@ While it sacrifices some efficiency compared to the optimized versions in the st
 - `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstsize`, `ft_lstlast`
 - `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`
 
-### Advanced Utilities
-- `get_next_line` and its bonus versions for reading files line by line
-- `ft_printf` for formatted output
-
 ---
 
 ## Installation  
 
 Clone the repository:
 ```bash
-git clone https://github.com/deunen/libft.git
-cd libft
+git clone https://github.com/deunen/42_cursus
+cd 42_cursus/printf/libft
 ```
 
 Build the library:
