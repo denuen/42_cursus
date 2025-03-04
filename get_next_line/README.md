@@ -39,12 +39,6 @@ Clone the repository:
 git clone https://github.com/deunen/42_cursus.git
 cd 42_cursus/get_next_line
 ```
-Build the library:
-```bash
-make
-```
-This will compile the necessary object files for the `get_next_line` implementation.
----
 ## Usage
 1. Include the header in your C files:
    ```c
