@@ -16,14 +16,14 @@ A small data exchange program using UNIX signals for communication between proce
 
 ---
 
-## What is minitalk?  
+## What is minitalk?
 
-`minitalk` is a client-server communication project that demonstrates inter-process communication using UNIX signals. The project consists of two programs: a server that listens for signals, and a client that sends messages to the server through these signals.  
+`minitalk` is a client-server communication project that demonstrates inter-process communication using UNIX signals. The project consists of two programs: a server that listens for signals, and a client that sends messages to the server through these signals.
 This project showcases fundamental concepts of signal handling, bit manipulation, and process communication in a UNIX environment, following the coding standards of **42 School**.
 
 ---
 
-## Features  
+## Features
 
 - Reliable communication between two processes using only UNIX signals
 - Efficient transmission of characters using binary representation
@@ -34,7 +34,7 @@ This project showcases fundamental concepts of signal handling, bit manipulation
 
 ---
 
-## How it Works  
+## How it Works
 
 The communication protocol works as follows:
 1. The server starts and displays its Process ID (PID)
@@ -49,11 +49,11 @@ This approach demonstrates efficient binary-level communication using only two s
 
 ---
 
-## Installation  
+## Installation
 
 Clone the repository:
 ```bash
-git clone https://github.com/deunen/42_cursus.git
+git clone https://github.com/denuen/42_cursus.git
 cd 42_cursus/minitalk
 ```
 Build the project:
@@ -66,7 +66,7 @@ This will compile both the server and client executables.
 
 ---
 
-## Usage  
+## Usage
 
 1. Start the server in one terminal:
    ```bash
@@ -83,7 +83,7 @@ This will compile both the server and client executables.
 
 ---
 
-## Project Structure  
+## Project Structure
 
 ```
 
@@ -96,9 +96,9 @@ minitalk/
 ```
 ---
 
-## Credits  
+## Credits
 
-Developed by [deunen](https://github.com/deunen) as part of the 42 School curriculum.  
+Developed by [denuen](https://github.com/denuen) as part of the 42 School curriculum.
 Special thanks to the 42 community for guidance and inspiration.
 
 ---

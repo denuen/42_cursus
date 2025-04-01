@@ -51,7 +51,7 @@ The initial approach was challenging due to a novice understanding of static var
 
 Clone the repository:
 ```bash
-git clone https://github.com/deunen/42_cursus.git
+git clone https://github.com/denuen/42_cursus.git
 cd 42_cursus/get_next_line
 ```
 
@@ -104,6 +104,6 @@ get_next_line/
 
 ## Credits
 
-Developed by [deunen](https://github.com/deunen) as part of the 42 School curriculum. Special thanks to the 42 community for guidance and support in mastering low-level file reading techniques.
+Developed by [denuen](https://github.com/denuen) as part of the 42 School curriculum. Special thanks to the 42 community for guidance and support in mastering low-level file reading techniques.
 
 ---

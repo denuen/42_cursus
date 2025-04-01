@@ -14,13 +14,13 @@ A custom implementation of a utility library in C, recreating some of the most c
 
 ---
 
-## What is libft?  
-`libft` is a C library that reimplements several standard library functions, as well as additional utilities that simplify working with strings, memory, file descriptors, and linked lists.  
+## What is libft?
+`libft` is a C library that reimplements several standard library functions, as well as additional utilities that simplify working with strings, memory, file descriptors, and linked lists.
 While it sacrifices some efficiency compared to the optimized versions in the standard library, it provides safeguards for compilation errors and memory leaks, and all the code complies with the formatting standards of **42 School**'s `norminette`.
 
 ---
 
-## Features  
+## Features
 - Reimplementation of standard C library functions (e.g., `atoi`, `memcpy`, `strlen`)
 - Memory management helpers (e.g., `calloc`, `bzero`)
 - String manipulation utilities (e.g., `strjoin`, `split`)
@@ -30,7 +30,7 @@ While it sacrifices some efficiency compared to the optimized versions in the st
 
 ---
 
-## Functions List  
+## Functions List
 
 ### Standard C Library Functions
 - Memory functions: `ft_memset`, `ft_memcpy`, `ft_memmove`, `ft_memcmp`, `ft_memchr`
@@ -52,11 +52,11 @@ While it sacrifices some efficiency compared to the optimized versions in the st
 
 ---
 
-## Installation  
+## Installation
 
 Clone the repository:
 ```bash
-git clone https://github.com/deunen/42_cursus.git
+git clone https://github.com/denuen/42_cursus.git
 cd 42_cursus/libft
 ```
 
@@ -69,7 +69,7 @@ This will generate `libft.a`, a static library that you can link to your own pro
 
 ---
 
-## Usage  
+## Usage
 
 1. Include `libft.h` in your C files:
    ```c
@@ -83,7 +83,7 @@ This will generate `libft.a`, a static library that you can link to your own pro
 
 ---
 
-## File Structure  
+## File Structure
 ```
 libft/
 ├── includes/          # Header files (libft.h)
@@ -95,8 +95,8 @@ libft/
 
 ---
 
-## Credits  
-Developed by [deunen](https://github.com/deunen) as part of the 42 School curriculum.  
+## Credits
+Developed by [denuen](https://github.com/denuen) as part of the 42 School curriculum.
 Special thanks to the 42 community for guidance and inspiration.
 
 ---

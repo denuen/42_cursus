@@ -66,7 +66,7 @@ A custom implementation of the `printf` function in C, adhering to the 42 School
 Clone the repository:
 
 ```bash
-git clone https://github.com/deunen/42_cursus.git
+git clone https://github.com/denuen/42_cursus.git
 cd 42_cursus/ft_printf
 ```
 
@@ -135,7 +135,7 @@ ft_printf/
 
 ## Credits
 
-Developed by [deunen](https://github.com/deunen) as part of the 42 School curriculum. Special thanks to the 42 community for guidance and inspiration.
+Developed by [denuen](https://github.com/denuen) as part of the 42 School curriculum. Special thanks to the 42 community for guidance and inspiration.
 
 ---
 
