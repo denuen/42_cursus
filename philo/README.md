@@ -134,5 +134,5 @@ philosophers/
 
 ## Credits
 
-Developed by denuen as part of the 42 School curriculum. Special thanks to the 42 community for guidance and inspiration.
+Developed by [denuen](https://github.com/denuen) as part of the 42 School curriculum. Special thanks to the 42 community for guidance and inspiration.
 ---
