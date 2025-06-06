@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 14:35:38 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/06 15:46:22 by apintaur         ###   ########.fr       */
+/*   Created: 2025/06/06 15:43:55 by apintaur          #+#    #+#             */
+/*   Updated: 2025/06/06 15:53:10 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ Fixed::Fixed( float nbr ) {
 	rawBits = static_cast<int>(roundf(nbr * (1 << fractionalBits)));
 }
 
-Fixed::Fixed(const Fixed& fixedPoint ) {
+Fixed::Fixed(const Fixed& Fixed ) {
 	std::cout << "Copy constructor called" << std::endl;
-	rawBits = fixedPoint.rawBits;
+	rawBits = Fixed.rawBits;
 }
 
-Fixed& Fixed::operator=(const Fixed& fixedPoint) {
+Fixed& Fixed::operator=(const Fixed& Fixed) {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &fixedPoint) {
-		rawBits = fixedPoint.rawBits;
+	if (this != &Fixed) {
+		rawBits = Fixed.rawBits;
 	}
 	return (*this);
 }
@@ -44,6 +44,22 @@ Fixed& Fixed::operator=(const Fixed& fixedPoint) {
 std::ostream& operator<<(std::ostream& out, const Fixed& fixedPoint) {
 	out << fixedPoint.toFloat();
 	return out;
+}
+
+Fixed	Fixed::operator+( const Fixed& fixedPoint ) const {
+
+}
+
+Fixed	Fixed::operator-( const Fixed& fixedPoint ) const {
+
+}
+
+Fixed	Fixed::operator*( const Fixed& fixedPoint ) const {
+
+}
+
+Fixed	Fixed::operator/( const Fixed& fixedPoint ) const {
+
 }
 
 int	Fixed::getRawBits( void ) const {
