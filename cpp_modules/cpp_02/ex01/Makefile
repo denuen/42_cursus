@@ -1,4 +1,4 @@
-NAME		= My_First_Class_in_Orthodox_Canonical_Form
+NAME		= FixedPoint_01
 
 CXX			= c++
 CXX_FLAGS	= -Wall -Wextra -Werror -std=c++98
