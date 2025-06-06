@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/06 09:11:53 by apintaur          #+#    #+#             */
+/*   Updated: 2025/06/06 09:19:12 by apintaur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
@@ -12,7 +24,7 @@ class	PhoneBook
 		int			size;
 
 	public:
-		PhoneBook(const int& size = 0);
+		PhoneBook();
 		PhoneBook(const PhoneBook &);
 		PhoneBook& operator=(const PhoneBook &);
 

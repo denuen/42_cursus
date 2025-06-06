@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   searchContact.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/06 09:12:12 by apintaur          #+#    #+#             */
+/*   Updated: 2025/06/06 09:14:33 by apintaur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/PhoneBook.hpp"
+#include <cstdlib>
 
 void	displayHeader();
 void	displayTab(const PhoneBook& phoneBook);
@@ -21,7 +34,7 @@ void	contactSearch(const PhoneBook& phoneBook)
 	std::cout << "\nPlease insert the contact's index to search for: ";
 	std::getline(std::cin, s);
 
-	tmp = phoneBook.getContact(std::atoi(s.c_str()));
+	tmp = phoneBook.getContact(atoi(s.c_str()));
 	if (tmp.getFirstName() != "(null)" && tmp.getLastName() != "(null)")
 	{
 		std::cout << "\n***Contact found***" << std::endl;
