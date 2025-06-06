@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 09:12:08 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/06 09:22:08 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/06 13:10:26 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ PhoneBook::PhoneBook()
 
 PhoneBook::PhoneBook(const PhoneBook &newPhoneBook)
 {
-	for (int i = 0; i < MAX_CONTACTS; i++) 
+	for (int i = 0; i < MAX_CONTACTS; i++)
 	{
 		contacts[i] = newPhoneBook.contacts[i];
 	}
@@ -56,6 +56,10 @@ void	PhoneBook::addContact(const Contact& newContact)
 {
 	if (isFull())
 	{
+		for (int i = 0; i < MAX_CONTACTS - 1; i++)
+		{
+			contacts[i] = contacts[i + 1];
+		}
 		contacts[MAX_CONTACTS - 1] = newContact;
 		return ;
 	}
