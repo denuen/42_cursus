@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 15:44:02 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/06 15:51:46 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/09 13:44:13 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,33 @@ public:
 	Fixed( float nbr );
 	Fixed( const Fixed& fixedPoint );
 
-	Fixed&	operator=( const Fixed& fixedPoint );
+	Fixed&			operator=( const Fixed& fixedPoint );
 
-	inline bool	operator>( const Fixed& fixedPoint ) const { return (this->getRawBits() > fixedPoint.getRawBits()); }
-	inline bool	operator<( const Fixed& fixedPoint ) const { return (this->getRawBits() < fixedPoint.getRawBits()); }
-	inline bool	operator>=( const Fixed& fixedPoint ) const { return (this->getRawBits() >= fixedPoint.getRawBits()); }
-	inline bool	operator<=( const Fixed& fixedPoint ) const { return (this->getRawBits() <= fixedPoint.getRawBits()); }
-	inline bool	operator==( const Fixed& fixedPoint ) const { return (this->getRawBits() == fixedPoint.getRawBits()); }
-	inline bool	operator!=( const Fixed& fixedPoint ) const { return (this->getRawBits() != fixedPoint.getRawBits()); }
+	inline bool		operator>( const Fixed& fixedPoint ) const { return (this->getRawBits() > fixedPoint.getRawBits()); }
+	inline bool		operator<( const Fixed& fixedPoint ) const { return (this->getRawBits() < fixedPoint.getRawBits()); }
+	inline bool		operator>=( const Fixed& fixedPoint ) const { return (this->getRawBits() >= fixedPoint.getRawBits()); }
+	inline bool		operator<=( const Fixed& fixedPoint ) const { return (this->getRawBits() <= fixedPoint.getRawBits()); }
+	inline bool		operator==( const Fixed& fixedPoint ) const { return (this->getRawBits() == fixedPoint.getRawBits()); }
+	inline bool		operator!=( const Fixed& fixedPoint ) const { return (this->getRawBits() != fixedPoint.getRawBits()); }
 
-	Fixed		operator+( const Fixed& fixedPoint ) const;
-	Fixed		operator-( const Fixed& fixedPoint ) const;
-	Fixed		operator*( const Fixed& fixedPoint ) const;
-	Fixed		operator/( const Fixed& fixedPoint ) const;
+	Fixed			operator+( const Fixed& fixedPoint ) const;
+	Fixed			operator-( const Fixed& fixedPoint ) const;
+	Fixed			operator*( const Fixed& fixedPoint ) const;
+	Fixed			operator/( const Fixed& fixedPoint ) const;
+	Fixed&			operator++( );
+	Fixed			operator++( int );
+	Fixed&			operator--( );
+	Fixed			operator--( int );
 
-	int		getRawBits( void ) const;
-	void	setRawBits( int const raw );
+	int				getRawBits( void ) const;
+	void			setRawBits( int const raw );
 
-	float	toFloat( void ) const;
-	int		toInt( void ) const;
+	float			toFloat( void ) const;
+	int				toInt( void ) const;
+	static const Fixed&	min(const Fixed& fixed1, const Fixed& fixed2);
+	static Fixed&	min( Fixed& fixed1, Fixed& fixed2);
+	static const Fixed&	max(const Fixed& fixed1, const Fixed& fixed2);
+	static Fixed&	max(Fixed& fixed1, Fixed& fixed2);
 
 	~Fixed();
 };

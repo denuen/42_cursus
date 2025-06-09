@@ -6,35 +6,31 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 15:43:55 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/06 15:53:10 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/09 13:54:35 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
+#include <cmath>
 
 Fixed::Fixed() {
-	std::cout << "Default constructor called" << std::endl;
 	rawBits = 0;
 }
 
 Fixed::Fixed( int nbr ) {
-	std::cout << "Int constructor called" << std::endl;
 	rawBits = nbr << fractionalBits;
 }
 
 Fixed::Fixed( float nbr ) {
-	std::cout << "Float constructor called" << std::endl;
 	rawBits = static_cast<int>(roundf(nbr * (1 << fractionalBits)));
 }
 
 Fixed::Fixed(const Fixed& Fixed ) {
-	std::cout << "Copy constructor called" << std::endl;
 	rawBits = Fixed.rawBits;
 }
 
 Fixed& Fixed::operator=(const Fixed& Fixed) {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &Fixed) {
 		rawBits = Fixed.rawBits;
 	}
@@ -47,28 +43,76 @@ std::ostream& operator<<(std::ostream& out, const Fixed& fixedPoint) {
 }
 
 Fixed	Fixed::operator+( const Fixed& fixedPoint ) const {
+	Fixed	newFixedPoint;
 
+	newFixedPoint.setRawBits(this->getRawBits() + fixedPoint.getRawBits());
+	return (newFixedPoint);
 }
 
 Fixed	Fixed::operator-( const Fixed& fixedPoint ) const {
+	Fixed	newFixedPoint;
 
+	newFixedPoint.setRawBits(this->getRawBits() - fixedPoint.getRawBits());
+	return (newFixedPoint);
 }
 
 Fixed	Fixed::operator*( const Fixed& fixedPoint ) const {
+	Fixed result;
+	int64_t	product;
+	int		scaledValue;
 
+	product = static_cast<int64_t>(this->rawBits) * \
+				static_cast<int64_t>(fixedPoint.rawBits);
+
+	scaledValue = static_cast<int>(product >> Fixed::fractionalBits);
+
+	result.setRawBits(scaledValue);
+	return (result);
 }
 
 Fixed	Fixed::operator/( const Fixed& fixedPoint ) const {
+	Fixed	result;
+	int64_t	numerator;
+	int64_t	denominator;
+	int		scaled;
 
+	numerator = static_cast<int64_t>(this->rawBits) << Fixed::fractionalBits;
+	denominator = static_cast<int64_t>(fixedPoint.rawBits);
+	scaled = static_cast<int>(numerator / denominator);
+
+	result.setRawBits(scaled);
+	return (result);
+}
+
+Fixed&		Fixed::operator++( ) {
+	this->rawBits += 1;
+	return (*this);
+}
+
+Fixed		Fixed::operator++( int ) {
+	Fixed	tmp(*this);
+
+	rawBits += 1;
+	return (tmp);
+}
+
+Fixed&		Fixed::operator--( ) {
+	this->rawBits -= 1;
+	return (*this);
+}
+
+Fixed		Fixed::operator--( int ) {
+	Fixed	tmp(*this);
+
+	rawBits -= 1;
+	return (tmp);
 }
 
 int	Fixed::getRawBits( void ) const {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (rawBits);
 }
 
 void	Fixed::setRawBits( int const raw ) {
-	std::cout << "setRawBits member function called" << std::endl;
 	rawBits = raw;
 }
 
@@ -80,6 +124,33 @@ int		Fixed::toInt( void ) const {
 	return (rawBits >> fractionalBits);
 }
 
+const Fixed&	Fixed::min(const Fixed& fixed1, const Fixed& fixed2) {
+	if (fixed1.getRawBits() > fixed2.getRawBits()) {
+		return (fixed2);
+	}
+	return (fixed1);
+}
+
+Fixed&	Fixed::min( Fixed& fixed1, Fixed& fixed2) {
+	if (fixed1.getRawBits() > fixed2.getRawBits()) {
+		return (fixed2);
+	}
+	return (fixed1);
+}
+
+const Fixed&	Fixed::max(const Fixed& fixed1, const Fixed& fixed2) {
+	if (fixed1.getRawBits() < fixed2.getRawBits()) {
+		return (fixed2);
+	}
+	return (fixed1);
+}
+
+Fixed&	Fixed::max(Fixed& fixed1, Fixed& fixed2) {
+	if (fixed1.getRawBits() < fixed2.getRawBits()) {
+		return (fixed2);
+	}
+	return (fixed1);
+}
+
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
 }
