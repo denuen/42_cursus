@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 16:57:04 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/04 17:10:41 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/09 09:25:36 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ class HumanA {
 
 private:
 	std::string	name;
-	Weapon		weapon;
+	Weapon&		weapon;
 
 public:
-	HumanA(const std::string& name = "null", const Weapon& newWeapon = Weapon("null"));
+	HumanA(const std::string& name, Weapon& newWeapon);
 
 	const std::string&	getName( void ) const { return (name); }
 	void				setName ( const std::string& newName ) { name = newName; }

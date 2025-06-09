@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 16:57:07 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/04 16:57:08 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/09 09:26:56 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 class HumanB {
 
 private:
-	Weapon		weapon;
 	std::string	name;
+	Weapon*		weapon;
 
 public:
 	HumanB(const std::string& name = "null");
 
 	const std::string&	getName( void ) const { return (name); }
 	void				setName ( const std::string& newName ) { name = newName; }
-	void				setWeapon ( const Weapon& newWeapon ) { weapon = newWeapon; }
+	void				setWeapon ( Weapon& newWeapon ) { weapon = &newWeapon; }
 
 	void	attack( void );
 
