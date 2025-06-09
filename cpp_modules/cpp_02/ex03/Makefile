@@ -1,9 +1,9 @@
-NAME		= FixedPoint_02
+NAME		= BSP
 
 CXX			= c++
 CXX_FLAGS	= -Wall -Wextra -Werror -std=c++98
 
-CXX_FILES	= main.cpp Fixed.cpp
+CXX_FILES	= main.cpp Fixed.cpp Point.cpp bsp.cpp
 OBJS		= $(CXX_FILES:.cpp=.o)
 
 all: $(NAME)
