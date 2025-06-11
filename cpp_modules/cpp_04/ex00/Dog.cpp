@@ -6,19 +6,20 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:50:34 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/11 15:16:37 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/11 15:36:52 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog( void ) : Animal(), type("dog") {
+Dog::Dog( void ) : Animal() {
 	std::cout << "Dog default constructor called" << std::endl;
+	type = "Dog";
 }
 
-Dog::Dog( const std::string& newName ) : Animal(newName), type("dog") {
+Dog::Dog( const std::string& newName ) : Animal(newName) {
 	std::cout << "Dog constructor with parameters called" << std::endl;
-
+	type = "Dog";
 }
 
 Dog::Dog( const Dog& dog ) : Animal(dog) {
