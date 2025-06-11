@@ -1,4 +1,4 @@
-NAME		= Animals
+NAME		= AnimalsWithBrain
 
 CXX			= c++
 CXX_FLAGS	= -Wall -Wextra -Werror -std=c++98
