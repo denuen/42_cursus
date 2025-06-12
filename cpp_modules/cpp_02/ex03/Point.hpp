@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:15:48 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/09 14:44:21 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:11:59 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ public:
 
 	Point&	operator=( const Point& point);
 
-	inline const Fixed&	getFixedX( void ) const { return (x); }
-	inline const Fixed&	getFixedY( void ) const { return (y); }
+	const Fixed&	getFixedX( void ) const;
+	const Fixed&	getFixedY( void ) const;
 
 	~Point();
 };

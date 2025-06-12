@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 15:44:02 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/09 13:44:13 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:11:59 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ public:
 
 	Fixed&			operator=( const Fixed& fixedPoint );
 
-	inline bool		operator>( const Fixed& fixedPoint ) const { return (this->getRawBits() > fixedPoint.getRawBits()); }
-	inline bool		operator<( const Fixed& fixedPoint ) const { return (this->getRawBits() < fixedPoint.getRawBits()); }
-	inline bool		operator>=( const Fixed& fixedPoint ) const { return (this->getRawBits() >= fixedPoint.getRawBits()); }
-	inline bool		operator<=( const Fixed& fixedPoint ) const { return (this->getRawBits() <= fixedPoint.getRawBits()); }
-	inline bool		operator==( const Fixed& fixedPoint ) const { return (this->getRawBits() == fixedPoint.getRawBits()); }
-	inline bool		operator!=( const Fixed& fixedPoint ) const { return (this->getRawBits() != fixedPoint.getRawBits()); }
+	bool			operator>( const Fixed& fixedPoint ) const;
+	bool			operator<( const Fixed& fixedPoint ) const;
+	bool			operator>=( const Fixed& fixedPoint ) const;
+	bool			operator<=( const Fixed& fixedPoint ) const;
+	bool			operator==( const Fixed& fixedPoint ) const;
+	bool			operator!=( const Fixed& fixedPoint ) const;
 
 	Fixed			operator+( const Fixed& fixedPoint ) const;
 	Fixed			operator-( const Fixed& fixedPoint ) const;

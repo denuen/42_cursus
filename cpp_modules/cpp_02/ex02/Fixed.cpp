@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 15:43:55 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/09 13:54:35 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:11:59 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,30 @@ Fixed&	Fixed::max(Fixed& fixed1, Fixed& fixed2) {
 		return (fixed2);
 	}
 	return (fixed1);
+}
+
+bool	Fixed::operator>( const Fixed& fixedPoint ) const {
+	return (this->getRawBits() > fixedPoint.getRawBits());
+}
+
+bool	Fixed::operator<( const Fixed& fixedPoint ) const {
+	return (this->getRawBits() < fixedPoint.getRawBits());
+}
+
+bool	Fixed::operator>=( const Fixed& fixedPoint ) const {
+	return (this->getRawBits() >= fixedPoint.getRawBits());
+}
+
+bool	Fixed::operator<=( const Fixed& fixedPoint ) const {
+	return (this->getRawBits() <= fixedPoint.getRawBits());
+}
+
+bool	Fixed::operator==( const Fixed& fixedPoint ) const {
+	return (this->getRawBits() == fixedPoint.getRawBits());
+}
+
+bool	Fixed::operator!=( const Fixed& fixedPoint ) const {
+	return (this->getRawBits() != fixedPoint.getRawBits());
 }
 
 Fixed::~Fixed() {

@@ -6,12 +6,13 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 14:35:38 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/06 15:46:22 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:11:59 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
+#include <cmath>
 
 Fixed::Fixed() {
 	std::cout << "Default constructor called" << std::endl;
