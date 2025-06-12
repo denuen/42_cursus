@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 11:24:44 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/10 16:08:08 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:38:56 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ class ClapTrap {
 
 		ClapTrap&							operator=( const ClapTrap& clapTrap );
 
-		inline const std::string&			getName( void ) const { return (name); }
-		inline const unsigned int&			getHitPoints( void ) const { return (hitPoints); }
-		inline const unsigned int&			getEnergyPoints( void ) const { return (energyPoints); }
-		inline const unsigned int&			getAttackDamage( void ) const { return (attackDamage); }
+		const std::string&					getName( void ) const;
+		const unsigned int&					getHitPoints( void ) const;
+		const unsigned int&					getEnergyPoints( void ) const;
+		const unsigned int&					getAttackDamage( void ) const;
 
-		inline void							setName( const std::string& newName ) { name = newName; }
-		inline void							setHitPoints( const unsigned int& newHitPoints ) { hitPoints = newHitPoints; }
-		inline void							setEnergyPoints( const unsigned int& newEnergyPoints ) { energyPoints = newEnergyPoints; }
-		inline void							setAttackDamage( const unsigned int& newAttackDamage ) { attackDamage = newAttackDamage; }
+		void								setName( const std::string& newName );
+		void								setHitPoints( const unsigned int& newHitPoints );
+		void								setEnergyPoints( const unsigned int& newEnergyPoints );
+		void								setAttackDamage( const unsigned int& newAttackDamage );
 
 		virtual void						attack( const std::string& target );
 		void								takeDamage( unsigned int amount );

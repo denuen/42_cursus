@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 11:29:41 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/11 11:41:22 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:38:56 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,36 @@ void	ClapTrap::beRepaired( unsigned int amount ) {
 
 ClapTrap::~ClapTrap( ) {
 	std::cout << "ClapTrap destructor called" << std::endl;
+}
+
+const std::string&	ClapTrap::getName( void ) const {
+	return (name);
+}
+
+const unsigned int&	ClapTrap::getHitPoints( void ) const {
+	return (hitPoints);
+}
+
+const unsigned int&	ClapTrap::getEnergyPoints( void ) const {
+	return (energyPoints);
+}
+
+const unsigned int&	ClapTrap::getAttackDamage( void ) const {
+	return (attackDamage);
+}
+
+void	ClapTrap::setName( const std::string& newName ) {
+	name = newName;
+}
+
+void	ClapTrap::setHitPoints( const unsigned int& newHitPoints ) {
+	hitPoints = newHitPoints;
+}
+
+void	ClapTrap::setEnergyPoints( const unsigned int& newEnergyPoints ) {
+	energyPoints = newEnergyPoints;
+}
+
+void	ClapTrap::setAttackDamage( const unsigned int& newAttackDamage ) {
+	attackDamage = newAttackDamage;
 }

@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 12:49:27 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/11 14:01:37 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:34:47 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap( void ) : FragTrap(), ScavTrap() {
 	ClapTrap::name = this->name + "_clap_name";
 	this->hitPoints = FragTrap::hitPoints;
 	this->energyPoints = ScavTrap::energyPoints;
-	this->attackDamage = FragTrap::attackDamage;
+	this->attackDamage = 30; // FragTrap attack damage
 }
 
 DiamondTrap::DiamondTrap( const std::string newName ) :\
@@ -27,7 +27,7 @@ DiamondTrap::DiamondTrap( const std::string newName ) :\
 	ClapTrap::name = this->name + "_clap_name";
 	this->hitPoints = FragTrap::hitPoints;
 	this->energyPoints = ScavTrap::energyPoints;
-	this->attackDamage = FragTrap::attackDamage;
+	this->attackDamage = 30; // FragTrap attack damage
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap& diamondTrap ) :\
@@ -56,21 +56,7 @@ void	DiamondTrap::whoAmI(void) {
 }
 
 void	DiamondTrap::attack( const std::string& target ) {
-	if (energyPoints > 0 && hitPoints > 0) {
-		std::cout << "DiamondTrap " << name << " attacks " << target << ", causing " \
-					<< attackDamage << " points of damage!";
-		std::cout << std::endl;
-		energyPoints -= 1;
-	} else if (energyPoints == 0) {
-		std::cout << "DiamondTrap " << name << " attack failed!\n";
-		std::cout << "DiamondTrap " << name << " has no more energy points left.";
-		std::cout << std::endl;
-	}
-	else {
-		std::cout << "DiamondTrap " << name << " attack failed!\n";
-		std::cout << "DiamondTrap " << name << " has no more hit points left.";
-	}
-	std::cout << std::endl;
+	ScavTrap::attack(target);
 }
 
 DiamondTrap::~DiamondTrap() {
