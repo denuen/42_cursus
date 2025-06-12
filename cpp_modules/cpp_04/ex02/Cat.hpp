@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:53:11 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/11 21:24:56 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:13:36 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Cat : public Animal {
 		Cat&	operator=( const Cat& cat );
 
 		virtual void	makeSound( void ) const;
+		Brain*			getBrain( void ) const { return brain; }
 
 		~Cat();
 };

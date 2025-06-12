@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 15:56:39 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/11 21:33:54 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:22:04 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ const std::string&	Brain::getIdea( const int& idx ) const {
 		static const std::string nullStr = "(null)";
 		return nullStr;
 	}
-	return (ideas[(head + idx) % MAX_IDEAS]);
+	return (ideas[idx]);
 }
 
 Brain::~Brain( void ) {
