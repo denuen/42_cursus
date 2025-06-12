@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:48:21 by apintaur          #+#    #+#             */
-/*   Updated: 2025/06/11 21:25:04 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/06/12 16:25:47 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Dog : public Animal {
 
 	public:
 		Dog();
-		Dog( const std::string& name );
 		Dog ( const Dog& dog);
 
 		Dog&	operator=( const Dog& dog );

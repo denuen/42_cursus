@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXX_FLAGS) $^ -o $@
 
-%.o:%.cpp $(HPP_DIR)/*
+%.o:%.cpp
 	$(CXX) $(CXX_FLAGS) -c $< -o $@
 
 clean:
