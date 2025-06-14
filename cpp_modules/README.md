@@ -36,7 +36,7 @@ The project complies with **42 School** coding standards and implements modern C
 
 ## Learning Objectives
 
-Through these modules are made to learn about:
+These modules are made to learn about:
 
 - **C++ Fundamentals**: Syntax, classes, objects and encapsulation
 - **Memory Management**: Dynamic allocation, RAII and resource management
