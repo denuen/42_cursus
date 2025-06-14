@@ -156,7 +156,7 @@ cpp_00/
     ├── main.cpp
     ├── tests.cpp
     ├── Makefile
-    └── 19920104_091532.log    # Log di esempio
+    └── 19920104_091532.log    # Example log
 ```
 
 ---
