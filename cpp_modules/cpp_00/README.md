@@ -28,7 +28,7 @@ Introduction to the fundamental concepts of C++, exploring classes, objects, sta
 
 The first C++ program that converts user input to uppercase.
 
-** Concepts learned: **
+**Concepts learned:**
 
 - Basic C++ syntax
 - String manipulation
