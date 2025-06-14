@@ -212,10 +212,10 @@ Fixed operator++(int);    // Post-increment
 
 ### Fixed-Point Arithmetic
 
-- 24-bit frazione per alta precisione
-- Supporto per operazioni matematiche
-- Conversioni sicure tra tipi
-- Overflow/underflow handling
+- 24-bit fraction for high precision
+- Support for mathematical operations
+- Safe conversions between types
+- Overflow / underflow handling
 
 ---
 
