@@ -1,64 +1,64 @@
 services:
-	mariadb:
-		container_name: mariadb
-		networks:
-			- inception
-		build: ./services/mariadb
-		image: mariadb:notlatest
-		env_file: .env
-		volumes:
-			- mariadb:/var/lib/mysql
-		restart: always
-		expose:
-			- "3306"
+  mariadb:
+    container_name: mariadb
+    networks:
+      - inception
+    build: ./services/mariadb
+    image: mariadb:notlatest
+    env_file: .env
+    volumes:
+      - mariadb:/var/lib/mysql
+    restart: always
+    expose:
+      - "3306"
 
-	nginx:
-		container_name: nginx
-		networks:
-			- inception
-		depends_on:
-			- wordpress
-		build: ./services/nginx
-		image: nginx:notlatest
-		env_file: .env
-		volumes:
-			- wordpress:/var/www/wordpress
-		restart: always
-		ports:
-			- "443:443"
+  nginx:
+    container_name: nginx
+    networks:
+      - inception
+    depends_on:
+      - wordpress
+    build: ./services/nginx
+    image: nginx:notlatest
+    env_file: .env
+    volumes:
+      - wordpress:/var/www/wordpress
+    restart: always
+    ports:
+      - "443:443"
 
-	wordpress:
-		container_name: wordpress
-		networks:
-			- inception
-		depends_on:
-			- mariadb
-		build: ./services/wordpress
-		image: wordpress:notlatest
-		env_file: .env
-		volumes:
-			- wordpress:/var/www/wordpress
-		restart: always
-		expose:
-			- "9000"
+  wordpress:
+    container_name: wordpress
+    networks:
+      - inception
+    depends_on:
+      - mariadb
+    build: ./services/wordpress
+    image: wordpress:notlatest
+    env_file: .env
+    volumes:
+      - wordpress:/var/www/wordpress
+    restart: always
+    expose:
+      - "9000"
 
 volumes:
-	mariadb:
-		driver: local
-		driver_opts:
-			type: none
-			#device: /home/denuen/data/mariadb
-			device: /Users/denuen/data/mariadb
-			o: bind
-	wordpress:
-		driver: local
-		driver_opts:
-			type: none
-			#device: /home/denuen/data/wordpress
-			device: /Users/denuen/data/wordpress
-			o: bind
+  mariadb:
+    driver: local
+    driver_opts:
+      type: none
+      #device: /home/denuen/data/mariadb
+      device: /Users/denuen/data/mariadb
+      o: bind
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      #device: /home/denuen/data/wordpress
+      device: /Users/denuen/data/wordpress
+      o: bind
 
 networks:
-	inception:
-		name: inception
-		driver: bridge
+  inception:
+    name: inception
+    driver: bridge
