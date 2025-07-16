@@ -6,6 +6,7 @@ REQUIRED_VARS=(
 	MYSQL_DATABASE MYSQL_USER MYSQL_PASSWORD
 	WP_ADMIN_USER WP_ADMIN_PASSWORD WP_ADMIN_EMAIL
 	WP_USER WP_USER_EMAIL WP_USER_PASSWORD
+	REDIS_PASSWORD
 )
 
 for var in "${REQUIRED_VARS[@]}"; do
@@ -39,6 +40,13 @@ if [ ! -f wp-config.php ]; then
 		--dbhost="mariadb" \
 		--path=/var/www/wordpress \
 		--allow-root
+
+	# Configure Redis connection in wp-config.php
+	wp config set WP_REDIS_HOST redis --allow-root
+	wp config set WP_REDIS_PORT 6379 --raw --allow-root
+	wp config set WP_REDIS_TIMEOUT 1 --raw --allow-root
+	wp config set WP_REDIS_DATABASE 0 --raw --allow-root
+	wp config set WP_REDIS_PASSWORD "${REDIS_PASSWORD}" --allow-root
 fi
 
 echo "Waiting for database connection..."
@@ -68,6 +76,9 @@ if ! wp core is-installed --allow-root; then
 		--admin_email="${WP_ADMIN_EMAIL}" \
 		--skip-email \
 		--allow-root
+
+	wp plugin install redis-cache --activate --allow-root
+	wp redis enable --allow-root
 
 	wp user create \
 		"${WP_USER}" "${WP_USER_EMAIL}" \
