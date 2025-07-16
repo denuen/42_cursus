@@ -18,6 +18,7 @@ services:
       - inception
     depends_on:
       - wordpress
+      - adminer
     build: ./services/nginx
     image: nginx:custom
     env_file: .env
@@ -70,6 +71,17 @@ services:
     networks:
       - inception
     restart: always
+
+  adminer:
+    container_name: adminer
+    networks:
+      - inception
+    build: ./services/bonus/adminer
+    image: adminer:custom
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
 
 volumes:
   mariadb:

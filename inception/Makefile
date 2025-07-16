@@ -54,4 +54,7 @@ redis-logs:
 ftp-logs:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f ftp
 
-.PHONY: all build up down clean fclean re logs status nginx-logs wordpress-logs mariadb-logs redis-logs ftp-logs
+adminer-logs:
+	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f adminer
+
+.PHONY: all build up down clean fclean re logs status nginx-logs wordpress-logs mariadb-logs redis-logs ftp-logs adminer-logs
