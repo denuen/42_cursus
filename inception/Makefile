@@ -7,6 +7,7 @@ all: build up
 data-dirs:
 	@mkdir -p $(DATA_DIR)/mariadb
 	@mkdir -p $(DATA_DIR)/wordpress
+	@mkdir -p $(DATA_DIR)/redis
 
 build: data-dirs
 	docker-compose -f $(DOCKER_COMPOSE_FILE) build
@@ -46,4 +47,7 @@ wordpress-logs:
 mariadb-logs:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f mariadb
 
-.PHONY: all build up down clean fclean re logs status
+redis-logs:
+	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f redis
+
+.PHONY: all build up down clean fclean re logs status nginx-logs wordpress-logs mariadb-logs redis-logs
