@@ -3,7 +3,7 @@ services:
     container_name: mariadb
     networks:
       - inception
-    build: ./services/mariadb
+    build: ./requirements/mariadb
     image: mariadb:custom
     env_file: .env
     volumes:
@@ -20,7 +20,7 @@ services:
       - wordpress
       - adminer
       - static-site
-    build: ./services/nginx
+    build: ./requirements/nginx
     image: nginx:custom
     env_file: .env
     volumes:
@@ -35,7 +35,7 @@ services:
       - inception
     depends_on:
       - mariadb
-    build: ./services/wordpress
+    build: ./requirements/wordpress
     image: wordpress:custom
     env_file: .env
     volumes:
@@ -46,7 +46,7 @@ services:
 
   redis:
     container_name: redis
-    build: ./services/bonus/redis
+    build: ./requirements/bonus/redis
     image: redis:custom
     restart: always
     networks:
@@ -60,7 +60,7 @@ services:
 
   ftp:
     container_name: ftp
-    build: ./services/bonus/ftp
+    build: ./requirements/bonus/ftp
     image: ftp:custom
     env_file:
       - .env
@@ -77,7 +77,7 @@ services:
     container_name: adminer
     networks:
       - inception
-    build: ./services/bonus/adminer
+    build: ./requirements/bonus/adminer
     image: adminer:custom
     ports:
       - "8080:8080"
@@ -88,7 +88,7 @@ services:
     container_name: static-site
     networks:
       - inception
-    build: ./services/bonus/static_site
+    build: ./requirements/bonus/static_site
     image: static-site:custom
     restart: always
 
