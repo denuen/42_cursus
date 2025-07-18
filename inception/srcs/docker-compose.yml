@@ -19,6 +19,7 @@ services:
     depends_on:
       - wordpress
       - adminer
+      - static-site
     build: ./services/nginx
     image: nginx:custom
     env_file: .env
@@ -82,6 +83,14 @@ services:
       - "8080:8080"
     depends_on:
       - mariadb
+
+  static-site:
+    container_name: static-site
+    networks:
+      - inception
+    build: ./services/bonus/static_site
+    image: static-site:custom
+    restart: always
 
 volumes:
   mariadb:
