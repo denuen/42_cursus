@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inception - Panoramica del Progetto</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<nav class="navigation">
+			<ul class="navigation__list">
+				<li class="navigation__item"><a href="#intro" class="navigation__link">Introduzione</a></li>
+				<li class="navigation__item"><a href="#mandatory" class="navigation__link">Mandatory</a></li>
+				<li class="navigation__item"><a href="#bonus" class="navigation__link">Bonus</a></li>
+				<li class="navigation__item"><a href="#conclusion" class="navigation__link">Conclusione</a></li>
+			</ul>
+		</nav>
+		<h1 class="header__title">Inception</h1>
+		<p class="header__subtitle">Progetto di System Administration con Docker</p>
+	</header>
+
+	<main class="main">
+		<section class="section section--intro" id="intro">
+			<p class="section__text">Inception è un progetto basato sulla comprensione e sull'uso di Docker. Nello specifico, di Docker CLI.</p>
+
+			<div class="content-block">
+				<h2 class="content-block__title">Docker e Docker CLI</h2>
+				<p class="content-block__text">Docker è una piattaforma di containerizzazione che consente di creare, distribuire ed eseguire applicazioni in ambienti isolati chiamati container. La Docker CLI (Command Line Interface) è lo strumento principale per interagire con Docker, permettendo di gestire immagini, container, reti e volumi attraverso comandi testuali.</p>
+
+				<p class="content-block__text">I container Docker offrono vantaggi significativi rispetto alla virtualizzazione tradizionale: sono più leggeri, si avviano più rapidamente e condividono il kernel del sistema operativo host. Docker CLI fornisce comandi essenziali come <code>docker build</code> per creare immagini, <code>docker run</code> per eseguire container, e <code>docker-compose</code> per orchestrare servizi multi-container.</p>
+			</div>
+		</section>
+
+		<section class="section section--project-overview">
+			<p class="section__text">Il progetto si compone di due parti fondamentali: <strong>mandatory</strong> e <strong>bonus</strong>.</p>
+		</section>
+
+		<section class="section section--mandatory" id="mandatory">
+			<h2 class="section__title">Parte Mandatory</h2>
+			<p class="section__text">La parte mandatory prevede l'integrazione nel progetto, di 3 servizi:</p>
+
+			<ul class="services-list">
+				<li class="services-list__item"><strong>NGINX</strong></li>
+				<li class="services-list__item"><strong>MariaDB</strong></li>
+				<li class="services-list__item"><strong>WordPress</strong></li>
+			</ul>
+
+			<div class="services-overview">
+				<h3 class="services-overview__title">Panoramica dei Servizi</h3>
+
+				<div class="service-card">
+					<h4 class="service-card__title">NGINX</h4>
+					<p class="service-card__text">NGINX è un server web ad alte prestazioni che funziona anche come reverse proxy, load balancer e cache HTTP. Nel progetto Inception, NGINX serve come punto di ingresso per tutte le richieste web, gestendo il traffico HTTPS e instradando le richieste verso il container WordPress. La sua configurazione deve includere certificati SSL/TLS per garantire connessioni sicure.</p>
+				</div>
+
+				<div class="service-card">
+					<h4 class="service-card__title">MariaDB</h4>
+					<p class="service-card__text">MariaDB è un sistema di gestione di database relazionale open-source, fork di MySQL. Nel contesto del progetto, MariaDB fornisce il database backend per WordPress, memorizzando contenuti, utenti, configurazioni e metadati. È necessario configurare utenti specifici, database dedicati e impostare le corrette autorizzazioni per garantire la sicurezza e il funzionamento del sistema.</p>
+				</div>
+
+				<div class="service-card">
+					<h4 class="service-card__title">WordPress</h4>
+					<p class="service-card__text">WordPress è un sistema di gestione dei contenuti (CMS) che permette di creare e gestire siti web dinamici. Nel progetto Inception, WordPress è configurato per utilizzare PHP-FPM (FastCGI Process Manager) per elaborare le richieste PHP in modo efficiente. Deve essere configurato per connettersi al database MariaDB e servire contenuti attraverso NGINX.</p>
+				</div>
+			</div>
+
+			<div class="requirements-section">
+				<h3 class="requirements-section__title">Requisiti</h3>
+
+				<div class="requirements-category">
+					<h4 class="requirements-category__title">Requisiti Generali</h4>
+					<ul class="requirements-list">
+						<li class="requirements-list__item">Ogni servizio deve essere containerizzato in un container Docker separato</li>
+						<li class="requirements-list__item">Utilizzo di Dockerfile personalizzati per ogni servizio (vietato l'uso di immagini precostituite)</li>
+						<li class="requirements-list__item">Orchestrazione dei servizi tramite docker-compose</li>
+						<li class="requirements-list__item">Configurazione di una rete Docker personalizzata per la comunicazione tra container</li>
+						<li class="requirements-list__item">Implementazione di volumi per la persistenza dei dati</li>
+						<li class="requirements-list__item">Utilizzo di variabili d'ambiente per le configurazioni sensibili</li>
+					</ul>
+				</div>
+
+				<div class="requirements-category">
+					<h4 class="requirements-category__title">Requisiti NGINX</h4>
+					<ul class="requirements-list">
+						<li class="requirements-list__item">Configurazione SSL/TLS obbligatoria (porta 443)</li>
+						<li class="requirements-list__item">Supporto per TLSv1.2 o TLSv1.3</li>
+						<li class="requirements-list__item">Redirect automatico da HTTP a HTTPS</li>
+						<li class="requirements-list__item">Configurazione come reverse proxy per WordPress</li>
+						<li class="requirements-list__item">Gestione delle richieste statiche e dinamiche</li>
+					</ul>
+				</div>
+
+				<div class="requirements-category">
+					<h4 class="requirements-category__title">Requisiti WordPress</h4>
+					<ul class="requirements-list">
+						<li class="requirements-list__item">Installazione e configurazione di PHP-FPM</li>
+						<li class="requirements-list__item">Configurazione del file wp-config.php</li>
+						<li class="requirements-list__item">Connessione al database MariaDB</li>
+						<li class="requirements-list__item">Creazione di almeno due utenti (amministratore e utente normale)</li>
+						<li class="requirements-list__item">Configurazione dei permessi dei file</li>
+					</ul>
+				</div>
+
+				<div class="requirements-category">
+					<h4 class="requirements-category__title">Requisiti MariaDB</h4>
+					<ul class="requirements-list">
+						<li class="requirements-list__item">Creazione di un database dedicato per WordPress</li>
+						<li class="requirements-list__item">Configurazione dell'utente root</li>
+						<li class="requirements-list__item">Creazione di un utente specifico per WordPress con privilegi limitati</li>
+						<li class="requirements-list__item">Configurazione per accettare connessioni dalla rete Docker</li>
+						<li class="requirements-list__item">Implementazione di meccanismi di backup e recovery</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--bonus" id="bonus">
+			<h2 class="section__title">Parte Bonus</h2>
+			<p class="section__text">La parte bonus, come indicato anche dal subject, prevede un'implementazione non particolarmente impegnativa, in quanto il progetto in sé ha già fornito molti concetti da acquisire e l'implementazione di ulteriori servizi non è vista tanto come l'uso del servizio in particolare, quanto l'abilità da parte dell'implementatore di padroneggiare correttamente Docker, container e la comunicazione che avviene tra essi.</p>
+
+			<p class="section__text">Tra i servizi implementabili nella parte bonus, troviamo:</p>
+
+			<ul class="bonus-services-list">
+				<li class="bonus-services-list__item"><strong>Redis</strong></li>
+				<li class="bonus-services-list__item"><strong>FTP</strong></li>
+				<li class="bonus-services-list__item"><strong>Adminer</strong></li>
+				<li class="bonus-services-list__item"><strong>Un server statico</strong></li>
+				<li class="bonus-services-list__item"><strong>Un servizio aggiuntivo a scelta</strong></li>
+			</ul>
+
+			<div class="bonus-services-overview">
+				<h3 class="bonus-services-overview__title">Panoramica dei Servizi Bonus</h3>
+
+				<div class="bonus-service-card">
+					<h4 class="bonus-service-card__title">Redis</h4>
+					<p class="bonus-service-card__text">Redis è un database in-memory ad alte prestazioni utilizzato principalmente come cache. Nel contesto di WordPress, Redis può essere implementato come object cache per migliorare significativamente le prestazioni del sito, riducendo il carico sul database MariaDB. La sua implementazione richiede l'installazione del plugin Redis Object Cache e la configurazione appropriata per permettere a WordPress di utilizzare Redis come sistema di caching.</p>
+				</div>
+
+				<div class="bonus-service-card">
+					<h4 class="bonus-service-card__title">FTP Server</h4>
+					<p class="bonus-service-card__text">L'implementazione di un server FTP (tipicamente vsftpd) permette di gestire i file del sito WordPress in modo più flessibile. Questo servizio consente agli utenti di caricare, modificare e gestire i file del sito attraverso client FTP. La configurazione deve includere utenti dedicati, chroot jail per la sicurezza e integrazione con i volumi condivisi con gli altri servizi.</p>
+				</div>
+
+				<div class="bonus-service-card">
+					<h4 class="bonus-service-card__title">Adminer</h4>
+					<p class="bonus-service-card__text">Adminer è un'interfaccia web per la gestione di database, alternativa più leggera e moderna a phpMyAdmin. Fornisce un'interfaccia grafica per gestire il database MariaDB, permettendo di eseguire query, modificare strutture delle tabelle e amministrare utenti e privilegi. La sua implementazione richiede la configurazione di PHP e l'integrazione con il proxy NGINX.</p>
+				</div>
+
+				<div class="bonus-service-card">
+					<h4 class="bonus-service-card__title">Server Statico</h4>
+					<p class="bonus-service-card__text">Un server statico può essere implementato utilizzando generatori di siti statici come Hugo, Jekyll, o semplicemente servendo file HTML (eventualmente css, js) statici. Questo servizio dimostra la capacità di integrare diversi tipi di contenuti web nell'architettura Docker e può essere utilizzato per documentazione, portfolio personale o landing page. La configurazione richiede l'integrazione con NGINX per il routing appropriato.</p>
+				</div>
+
+				<div class="bonus-service-card">
+					<h4 class="bonus-service-card__title">Servizio aggiuntivo</h4>
+					<p class="bonus-service-card__text">Il servizio aggiuntivo a scelta offre la libertà di implementare qualsiasi tecnologia che dimostri la padronanza di Docker. Esempi possibili includono: monitoring con Prometheus/Grafana, message queue con RabbitMQ, search engine con Elasticsearch, o servizi di autenticazione. La scelta dipende dall'interesse personale e dagli obiettivi di apprendimento.</p>
+				</div>
+			</div>
+
+			<div class="bonus-requirements">
+				<h3 class="bonus-requirements__title">Considerazioni sui requisiti bonus</h3>
+				<p class="bonus-requirements__text">Ogni servizio, come per la parte mandatory deve rispettare i requisiti generali di buona implementazione, ma in questo caso non vi sono regole particolarmente mirate. Essendo un bonus, viene data maggiore margine di implementazione al cadet.</p>
+
+				<p class="bonus-requirements__text">I principi guida per l'implementazione dei servizi bonus includono:</p>
+				<ul class="bonus-requirements-list">
+					<li class="bonus-requirements-list__item">Mantenimento dell'architettura containerizzata</li>
+					<li class="bonus-requirements-list__item">Integrazione coerente con l'infrastruttura esistente</li>
+					<li class="bonus-requirements-list__item">Configurazione sicura e best practices</li>
+					<li class="bonus-requirements-list__item">Documentazione appropriata dell'implementazione</li>
+					<li class="bonus-requirements-list__item">Testing e verifica del funzionamento</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section section--conclusion" id="conclusion">
+			<h2 class="section__title">Conclusione</h2>
+			<p class="section__text">Il progetto Inception rappresenta un'opportunità completa per apprendere i concetti fondamentali di Docker e dell'orchestrazione di container. Attraverso l'implementazione di servizi reali in un ambiente containerizzato, si acquisiscono competenze pratiche di system administration, networking, sicurezza e deployment che sono essenziali nel panorama tecnologico moderno.</p>
+
+			<p class="section__text">La combinazione di servizi mandatory e bonus offre un equilibrio tra requisiti strutturati e libertà creativa, permettendo di esplorare diverse tecnologie mentre si mantiene focus sui principi fondamentali di containerizzazione e orchestrazione.</p>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p class="footer__text">Progetto Inception - 42</p>
+		<p class="footer__text">by Antonio Pintauro</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
