@@ -39,6 +39,17 @@ function initScrollEvent() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	const navLinks = document.querySelectorAll('.navigation__link');
+
 	initScrollToTop();
 	initScrollEvent();
+
+	navLinks.forEach(link => {
+		link.addEventListener('click', function () {
+			setTimeout(() => {
+				this.blur();
+			}, 300);
+		});
+	});
 });
+
