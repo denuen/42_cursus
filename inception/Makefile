@@ -9,6 +9,7 @@ data-dirs:
 	@mkdir -p $(DATA_DIR)/wordpress
 	@mkdir -p $(DATA_DIR)/redis
 	@mkdir -p $(DATA_DIR)/ftp
+	@mkdir -p $(DATA_DIR)/prometheus
 
 build: data-dirs
 	docker-compose -f $(DOCKER_COMPOSE_FILE) build
@@ -60,6 +61,10 @@ adminer-logs:
 static-site-logs:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f static-site
 
+prometheus-logs:
+	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f prometheus
+
 .PHONY: all build up down clean fclean re logs status \
 		nginx-logs wordpress-logs mariadb-logs redis-logs \
-		ftp-logs adminer-logs static-site-logs
+		ftp-logs adminer-logs static-site-logs \
+		prometheus-logs

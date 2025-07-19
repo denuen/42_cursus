@@ -92,6 +92,27 @@ services:
     image: static-site:custom
     restart: always
 
+
+  prometheus:
+    build:
+      context: ./requirements/bonus/prometheus
+    image: prometheus:custom
+    container_name: prometheus
+    volumes:
+      - prometheus:/var/lib/prometheus
+      - ./requirements/bonus/prometheus/conf/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - inception
+    depends_on:
+      - mariadb
+      - wordpress
+      - redis
+      - ftp
+      - adminer
+      - static-site
+    restart: unless-stopped
+
+
 volumes:
   mariadb:
     driver: local
@@ -119,6 +140,13 @@ volumes:
       type: none
       device: /Users/denuen/data/ftp
       o: bind
+  prometheus:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/denuen/data/prometheus
+      o: bind
+
 
 networks:
   inception:
