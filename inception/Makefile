@@ -30,6 +30,7 @@ clean: down
 fclean: clean
 	docker-compose -f $(DOCKER_COMPOSE_FILE) down -v --remove-orphans
 	docker system prune -a -f --volumes
+	docker image prune
 	sudo rm -rf $(DATA_DIR)
 
 re: fclean all

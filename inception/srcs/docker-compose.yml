@@ -28,6 +28,8 @@ services:
     restart: always
     ports:
       - "443:443"
+    expose:
+      - "81"
 
   wordpress:
     container_name: wordpress
@@ -96,11 +98,13 @@ services:
   prometheus:
     build:
       context: ./requirements/bonus/prometheus
-    image: prometheus:custom
+      args:
+        - PROMETHEUS_VERSION=${PROMETHEUS_VERSION}
+        - PROMETHEUS_USER=${PROMETHEUS_USER}
+        - PROMETHEUS_GROUP=${PROMETHEUS_GROUP}
     container_name: prometheus
-    volumes:
-      - prometheus:/var/lib/prometheus
-      - ./requirements/bonus/prometheus/conf/prometheus.yml:/etc/prometheus/prometheus.yml
+    expose:
+      - "9090"
     networks:
       - inception
     depends_on:
@@ -110,7 +114,45 @@ services:
       - ftp
       - adminer
       - static-site
-    restart: unless-stopped
+      - nginx_exporter
+      - mariadb_exporter
+
+  nginx_exporter:
+    build:
+      context: ./requirements/bonus/metrics/nginx
+      args:
+        - NGINX_EXPORTER_VERSION=${NGINX_EXPORTER_VERSION}
+        - NGINX_EXPORTER_USER=${NGINX_EXPORTER_USER}
+    image: nginx_exporter:custom
+    container_name: nginx_exporter
+    environment:
+      - NGINX_STATUS_URL=http://nginx:81/nginx_status
+    networks:
+      - inception
+    restart: always
+    depends_on:
+      - nginx
+    expose:
+      - "9113"
+
+  mariadb_exporter:
+    container_name: mariadb_exporter
+    build:
+      context: ./requirements/bonus/metrics/mariadb
+      args:
+        - MARIADB_EXPORTER_VERSION=${MARIADB_EXPORTER_VERSION}
+        - MARIADB_EXPORTER_USER=${MARIADB_EXPORTER_USER}
+        - MARIADB_EXPORTER_GROUP=${MARIADB_EXPORTER_GROUP}
+    image: mariadb_exporter:custom
+    networks:
+      - inception
+    environment:
+      - DATA_SOURCE_NAME=${MARIADB_EXPORTER_USER}:${MARIADB_EXPORTER_PASS}@tcp(${MARIADB_EXPORTER_HOST}:${MARIADB_EXPORTER_PORT})/
+    depends_on:
+      - mariadb
+    restart: always
+    expose:
+      - "9104"
 
 
 volumes:
