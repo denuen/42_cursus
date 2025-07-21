@@ -1,11 +1,13 @@
 # NetPractice
 
 A foundational project from the 42 curriculum, designed to introduce the core concepts of networking. This project provides a series of interactive exercises that simulate small-scale networks, allowing for hands-on practice with TCP/IP addressing and configuration.
+
 ---
 
 ## Project Overview
 
 NetPractice is an interactive, browser-based training tool that challenges you to solve 10 distinct networking problems. Each level presents a misconfigured network diagram that must be corrected by properly configuring IP addresses, netmasks, and gateways for various devices.
+
 ---
 
 ### Key Objectives
@@ -19,6 +21,7 @@ NetPractice is an interactive, browser-based training tool that challenges you t
 ## How It Works
 
 The project is composed of a self-contained web interface that runs locally in your browser.
+
 ---
 
 ### The Interface
