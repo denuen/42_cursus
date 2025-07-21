@@ -4,7 +4,7 @@ This repository serves as a detailed chronicle of my progress through the 42 pro
 
 ## Projects
 
-Here's a brief overview of the projects included in this repository (for detailed information, enter the corresponding folder):
+Here's a brief overview of the projects included in this repository (for detailed informations, enter the corresponding folder):
 
 ### libft ([`libft`](./libft/))
 
