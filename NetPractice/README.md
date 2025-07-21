@@ -2,43 +2,40 @@
 
 A foundational project from the 42 curriculum, designed to introduce the core concepts of networking. This project provides a series of interactive exercises that simulate small-scale networks, allowing for hands-on practice with TCP/IP addressing and configuration.
 
----
 
 ## Project Overview
 
 NetPractice is an interactive, browser-based training tool that challenges you to solve 10 distinct networking problems. Each level presents a misconfigured network diagram that must be corrected by properly configuring IP addresses, netmasks, and gateways for various devices.
 
----
 
-### Key Objectives
+## Key Objectives
 
 - **Understand TCP/IP Addressing**: Learn how IP addresses, subnets, and gateways work together.
 - **Network Configuration**: Gain practical experience in configuring network interfaces for hosts and routers.
 - **Problem Solving**: Develop troubleshooting skills by diagnosing and fixing common network issues.
 - **Simulated Environment**: Work within a safe, simulated environment that provides immediate feedback.
----
+
 
 ## How It Works
 
 The project is composed of a self-contained web interface that runs locally in your browser.
 
----
 
-### The Interface
+## The Interface
 
 - **Network Diagram**: Each level displays a visual representation of the network, including machines, routers, and their connections.
 - **Configuration Fields**: Editable fields for IP addresses, netmasks, and default gateways are provided for each device.
 - **Goal Display**: A clear objective is stated at the top of the page for each level.
 - **Real-time Feedback**: A log at the bottom of the page provides hints and error messages to guide you.
----
 
-### Solving a Level
+
+## Solving a Level
 
 1.  **Analyze the Diagram**: Understand the network topology and the goal you need to achieve.
 2.  **Configure Devices**: Fill in the unshaded fields with the correct network parameters.
 3.  **Verify Your Solution**: Use the `[Check again]` button to test your configuration. The interface will indicate if the solution is correct.
 4.  **Save and Advance**: Upon successful completion of a level, download your configuration using the `[Get my config]` button, then proceed to the next.
----
+
 
 ## Getting Started
 
@@ -52,7 +49,7 @@ The project is composed of a self-contained web interface that runs locally in y
 3.  **Enter your login (if you have one)**:
     Make sure to enter your 42 login in the provided field. This is crucial for generating the correct configuration files for submission.
 	*If you do not have a 42 login and simply wish to experiment with the interface, you may leave the login field blank.*
----
+
 
 ## Submission
 
@@ -61,7 +58,7 @@ Subsequently, you must repeat the entire project from scratch under the supervis
 
 - **File Naming**: The files will be named `level1.json`, `level2.json`, and so on.
 - **Location**: Place all 10 `.json` files in the root of the `NetPractice` directory.
----
+
 
 ## Learning Outcomes
 
@@ -71,7 +68,7 @@ This project provides a solid foundation in:
 - **IP Addressing**: Mastery of subnetting and IP address allocation.
 - **Routing**: Basic concepts of how data is routed between networks.
 - **Systematic Troubleshooting**: A systematic and rigorous approach to identifying and resolving network issues.
----
+
 
 ## Credits
 
