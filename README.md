@@ -6,34 +6,34 @@ This repository serves as a detailed chronicle of my progress through the 42 pro
 
 Here's a brief overview of the projects included in this repository (for detailed information, enter the corresponding folder):
 
-### libft (`libft`)
+### libft ([`libft`](./libft/))
 
 A foundational C library containing reimplementations of many standard C functions as well as other useful utility functions. This is the first project of the 42 curriculum.
 
-### ft_printf (`ft_printf`)
+### ft_printf ([`ft_printf`](./ft_printf/))
 
 A custom implementation of the standard C library function `printf`. This project focuses on variadic functions and string formatting.
 
-### get_next_line (`get_next_line`)
+### get_next_line ([`get_next_line`](./get_next_line/))
 
 A function that returns a line read from a file descriptor. This project challenges memory management and file I/O skills.
 
-### Philosophers (`philo`)
+### Philosophers ([`philo`](./philo/))
 
 An implementation of the Dining Philosophers problem, a classic synchronization problem in computer science. This project delves into multithreading, mutexes, and avoiding deadlocks.
 
-### Minitalk (`minitalk`)
+### Minitalk ([`minitalk`](./minitalk/))
 
 A client-server communication program using only UNIX signals (SIGUSR1 and SIGUSR2). This project explores signal handling and binary data transmission.
 
-### C++ Modules (`cpp_modules`)
+### C++ Modules ([`cpp_modules`](./cpp_modules/))
 
 A series of modules covering the fundamentals and advanced concepts of C++. Each module contains exercises focused on specific topics, from basic syntax to object-oriented programming.
 
-### NetPractice (`NetPractice`)
+### NetPractice ([`NetPractice`](./NetPractice/))
 
 A series of exercises designed to teach the basics of networking and IP addressing. The goal is to correctly configure network interfaces to allow machines to communicate.
 
-### Inception (`inception`)
+### Inception ([`inception`](./inception/))
 
 A project focused on system administration and containerization. It involves setting up a multi-service web application using Docker, including Nginx, WordPress, and MariaDB and many other services.
