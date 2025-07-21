@@ -107,6 +107,8 @@ services:
       - "9090"
     networks:
       - inception
+    volumes:
+      - prometheus:/prometheus
     depends_on:
       - mariadb
       - wordpress
@@ -161,6 +163,7 @@ services:
       context: ./requirements/bonus/metrics/redis
     environment:
       - REDIS_EXPORTER_VERSION=${REDIS_EXPORTER_VERSION}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     image:
       redis_exporter:custom
     networks:
@@ -170,6 +173,23 @@ services:
     restart: always
     expose:
       - "9121"
+
+
+  grafana:
+    build:
+      context: ./requirements/bonus/grafana
+      args:
+        GRAFANA_VERSION: ${GRAFANA_VERSION}
+        DOMAIN_NAME: ${DOMAIN_NAME}
+    image: grafana:custom
+    container_name: grafana
+    volumes:
+      - grafana:/var/lib/grafana
+    environment:
+      - DOMAIN_NAME=${DOMAIN_NAME}
+    networks:
+      - inception
+
 
 volumes:
   mariadb:
@@ -204,7 +224,12 @@ volumes:
       type: none
       device: /Users/denuen/data/prometheus
       o: bind
-
+  grafana:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/denuen/data/grafana
+      o: bind
 
 networks:
   inception:
