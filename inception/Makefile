@@ -10,6 +10,7 @@ data-dirs:
 	@mkdir -p $(DATA_DIR)/redis
 	@mkdir -p $(DATA_DIR)/ftp
 	@mkdir -p $(DATA_DIR)/prometheus
+	@mkdir -p $(DATA_DIR)/grafana
 
 build: data-dirs
 	docker-compose -f $(DOCKER_COMPOSE_FILE) build
@@ -65,7 +66,10 @@ static-site-logs:
 prometheus-logs:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f prometheus
 
+grafana-logs:
+	docker-compose -f $(DOCKER_COMPOSE_FILE) logs -f grafana
+
 .PHONY: all build up down clean fclean re logs status \
 		nginx-logs wordpress-logs mariadb-logs redis-logs \
 		ftp-logs adminer-logs static-site-logs \
-		prometheus-logs
+		prometheus-logs grafana-logs
