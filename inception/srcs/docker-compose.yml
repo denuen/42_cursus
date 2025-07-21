@@ -155,6 +155,22 @@ services:
       - "9104"
 
 
+  redis_exporter:
+    container_name: redis_exporter
+    build:
+      context: ./requirements/bonus/metrics/redis
+    environment:
+      - REDIS_EXPORTER_VERSION=${REDIS_EXPORTER_VERSION}
+    image:
+      redis_exporter:custom
+    networks:
+      - inception
+    depends_on:
+      - redis
+    restart: always
+    expose:
+      - "9121"
+
 volumes:
   mariadb:
     driver: local
