@@ -3,8 +3,6 @@
 
 int	main() {
 
-	Bureaucrat	noargs;
-
 	try {
 		Bureaucrat	validArgs("John", 12);
 		Bureaucrat	invalidArgs("John", 151);
@@ -17,7 +15,5 @@ int	main() {
 	catch(const Bureaucrat::GradeTooLowException& e) {
 		std::cerr << "Caught GradeTooLowException: " << e.what() << std::endl;
 	}
-
-	std::cout << noargs;
 
 }

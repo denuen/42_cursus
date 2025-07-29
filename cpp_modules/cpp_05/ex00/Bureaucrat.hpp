@@ -12,11 +12,12 @@ class Bureaucrat {
 		static const int	HIGHEST_GRADE_RATE = 1;
 		static const int	LOWEST_GRADE_RATE = 150;
 
+		Bureaucrat();
 		Bureaucrat(const Bureaucrat&);
 		Bureaucrat&	operator=(const Bureaucrat&);
 
 	public:
-		Bureaucrat(const std::string& name = "undefined", const int grade = 150);
+		Bureaucrat(const std::string& name, const int grade);
 
 		inline std::string	getName() const { return (name); }
 		inline int			getGrade() const { return(grade); }
