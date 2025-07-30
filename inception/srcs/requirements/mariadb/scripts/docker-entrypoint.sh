@@ -25,7 +25,7 @@ done
 
 mysql < /tmp/init.sql
 
-mysqladmin shutdown
+mysqladmin shutdown -u root -p${MYSQL_ROOT_PASSWORD}
 
 # Start MySQL in foreground
 exec mysqld_safe --datadir=/var/lib/mysql
