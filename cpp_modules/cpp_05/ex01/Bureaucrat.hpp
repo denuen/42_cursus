@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/08 15:43:04 by apintaur          #+#    #+#             */
+/*   Updated: 2025/08/08 15:43:05 by apintaur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
@@ -26,7 +38,7 @@ class Bureaucrat {
 		inline int			getGrade() const { return(grade); }
 		inline int			getHighestGradeRate() const { return (HIGHEST_GRADE_RATE); }
 		inline int			getLowestGradeRate() const { return (LOWEST_GRADE_RATE); }
-		
+
 		void				incrementGrade();
 		void				decrementGrade();
 
