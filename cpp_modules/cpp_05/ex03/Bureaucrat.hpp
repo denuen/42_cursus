@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/08 15:44:17 by apintaur          #+#    #+#             */
+/*   Updated: 2025/08/08 15:44:18 by apintaur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
@@ -45,7 +57,7 @@ class Bureaucrat {
 		};
 
 		void	executeForm(AForm const & form) const;
-		
+
 		~Bureaucrat();
 };
 
