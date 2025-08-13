@@ -39,7 +39,7 @@ std::string	checkCharBounds(long long rChar) {
 
 	std::string	res;
 
-	if (rChar >= 0 && rChar <= 31 || rChar == 127) {
+	if ((rChar >= 0 && rChar <= 31) || rChar == 127) {
 		res = "Non displayable";
 	} else if (rChar < 0 || rChar > 127) {
 		res = "impossible";
