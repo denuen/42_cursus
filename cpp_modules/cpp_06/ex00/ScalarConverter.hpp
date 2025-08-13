@@ -20,7 +20,6 @@ void	displayConversionResult(const std::string& rChar, const std::string& rInt,
 								const std::string& rFloat, const std::string& rDouble);
 std::string	checkIntBounds(long long rInt);
 std::string	checkCharBounds(long long rChar);
-std::string	checkFloatBounds(const std::string& literal, char* endptr);
-std::string	checkDoubleBounds(const std::string& literal, char* endptr);
+std::string	checkDecimalBounds(const std::string& literal, char* endptr);
 
 #endif

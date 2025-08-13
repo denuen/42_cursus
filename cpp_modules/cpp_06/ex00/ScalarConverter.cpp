@@ -19,8 +19,10 @@ void	ScalarConverter::convert(const std::string& literal) {
 			rInt = std::numeric_limits<long long>::max();
 		}
 
+		std::string	decimalBounds = checkDecimalBounds(literal, endptr);
+
 		displayConversionResult(checkCharBounds(rInt), checkIntBounds(rInt),
-								checkFloatBounds(literal, endptr), checkDoubleBounds(literal, endptr));
+								decimalBounds + 'f', decimalBounds);
 	}
 
 }
@@ -63,37 +65,7 @@ std::string	checkIntBounds(long long rInt) {
 	return (res);
 }
 
-std::string checkFloatBounds(const std::string& literal, char* endptr) {
-
-	if (literal == "inf" || literal == "+inf" || literal == "inff" || literal == "+inff") {
-		return "+inff";
-	} else if (literal == "-inf" || literal == "-inff") {
-		return "-inff";
-	}
-
-	std::string	normalizedLiteral;
-	long double	rFloat;
-
-	normalizedLiteral = literal.substr(0, literal.find_first_of('f'));
-	rFloat = std::strtold(normalizedLiteral.c_str(), &endptr);
-
-	if (endptr == normalizedLiteral.c_str()) {
-		return ("impossible");
-	} else if (std::isnan(rFloat)) {
-		return ("nanf");
-	} else if (rFloat > std::numeric_limits<float>::max()
-		|| rFloat < std::numeric_limits<float>::min()) {
-			return ("impossible");
-	}
-
-	if (normalizedLiteral.find('.') == std::string::npos && normalizedLiteral.find('e') == std::string::npos) {
-		normalizedLiteral += ".0";
-	}
-
-	return (normalizedLiteral + 'f');
-}
-
-std::string checkDoubleBounds(const std::string& literal, char* endptr) {
+std::string checkDecimalBounds(const std::string& literal, char* endptr) {
 
 	if (literal == "inf" || literal == "+inf" || literal == "inff" || literal == "+inff") {
 		return ("+inf");
@@ -118,6 +90,8 @@ std::string checkDoubleBounds(const std::string& literal, char* endptr) {
 
 	if (normalizedLiteral.find('.') == std::string::npos && normalizedLiteral.find('e') == std::string::npos) {
 		normalizedLiteral += ".0";
+	} else if (normalizedLiteral.back() == '.') {
+		normalizedLiteral += "0";
 	}
 
 	return (normalizedLiteral);
