@@ -1,6 +1,6 @@
 NAME		= Whatever
 CXX			= c++
-CXX_FLAGS	= -Wall -Wextra -Werror
+CXX_FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRCS		= $(wildcard *.cpp)
 HEADERS		= $(wildcard *.hpp)
