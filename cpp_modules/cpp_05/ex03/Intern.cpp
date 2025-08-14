@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:44:18 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:44:19 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/08/14 10:35:04 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ static AForm*	createPresidentialForm(const std::string& target) {
 
 Intern::Intern() {
 
-	forms[0] = {"shrubberry creation", &createShrubberyForm};
-	forms[1] = {"robotomy request", &createRobotomyForm};
-	forms[2] = {"presidential pardon", &createPresidentialForm};
+	forms[0].name = "shrubberry creation";
+	forms[0].create = &createShrubberyForm;
+	forms[1].name = "robotomy request";
+	forms[1].create = &createRobotomyForm;
+	forms[2].name = "presidential pardon";
+	forms[2].create = &createPresidentialForm;
 
 }
 
