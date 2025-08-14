@@ -1,6 +1,6 @@
 NAME		= Serializer
 CXX			= c++
-CXX_FLAGS	= -Wall -Werror -Wextra
+CXX_FLAGS	= -Wall -Werror -Wextra -std=c++98
 
 SRCS		= main.cpp Serializer.cpp
 HEADERS		= ScalarConverter.hpp Data.hpp

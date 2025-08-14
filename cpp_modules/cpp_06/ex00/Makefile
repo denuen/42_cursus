@@ -1,6 +1,6 @@
 NAME		= ScalarConverter
 CXX			= c++
-CXX_FLAGS	= -Wall -Werror -Wextra
+CXX_FLAGS	= -Wall -Werror -Wextra -std=c++98
 
 SRCS		= ScalarConverter.cpp main.cpp
 HEADERS		= ScalarConverter.hpp
