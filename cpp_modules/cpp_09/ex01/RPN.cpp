@@ -1,6 +1,5 @@
 #include "RPN.hpp"
 #include <sstream>
-#include <stdexcept>
 
 const char* Rpn::OPERATION_TOKENS[OPERATION_COUNT] = {"+", "-", "/", "*"};
 
