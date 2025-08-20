@@ -1,4 +1,4 @@
-# Inception
+# Inception - Grade: 125/100
 
 A comprehensive Docker infrastructure project that demonstrates system administration concepts through containerization. This project creates a small-scale infrastructure using Docker Compose, featuring a WordPress website with database backend, along with several additional services for enhanced functionality and monitoring.
 
