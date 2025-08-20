@@ -1,4 +1,4 @@
-# cpp_02
+# cpp_02 - Grade: 100/100
 
 Ad-hoc polymorphism, operator overloading and Orthodox Canonical form of C++ classes.
 
