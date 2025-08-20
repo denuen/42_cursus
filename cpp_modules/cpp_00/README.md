@@ -1,4 +1,4 @@
-# cpp_00
+# cpp_00 - Grade: 100/100
 
 Introduction to the fundamental concepts of C++, exploring classes, objects, static members and user interaction.
 
