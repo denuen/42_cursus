@@ -1,4 +1,4 @@
-# libft
+# libft - Grade: 125/100
 A custom implementation of a utility library in C, recreating some of the most common functions from the standard C library, along with additional helpful functions.
 
 ---
