@@ -1,4 +1,4 @@
-# get_next_line
+# get_next_line - Grade: 125/100
 
 A custom implementation of a line-reading function in C, designed to efficiently read lines from file descriptors at the 42 School.
 
