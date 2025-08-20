@@ -1,4 +1,4 @@
-# NetPractice
+# NetPractice - Grade: 100/100
 
 A foundational project from the 42 curriculum, designed to introduce the core concepts of networking. This project provides a series of interactive exercises that simulate small-scale networks, allowing for hands-on practice with TCP/IP addressing and configuration.
 
