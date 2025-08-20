@@ -1,4 +1,4 @@
-# ft_printf
+# ft_printf - Grade: 100/100
 
 A custom implementation of the `printf` function in C, adhering to the 42 School standards.
 
