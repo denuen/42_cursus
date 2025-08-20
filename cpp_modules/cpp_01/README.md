@@ -1,4 +1,4 @@
-# cpp_01
+# cpp_01 - Grade: 100/100
 
 Advanced exploration of memory management, references, pointers and dynamic allocation in C++.
 
