@@ -1,4 +1,4 @@
-# philosophers
+# philosophers - Grade: 125/100
 
 A simulation of the dining philosophers problem, showcasing process synchronization and thread management.
 
