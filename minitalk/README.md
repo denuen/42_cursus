@@ -1,4 +1,4 @@
-# minitalk
+# minitalk - Grade: 125/100
 
 A small data exchange program using UNIX signals for communication between processes.
 
