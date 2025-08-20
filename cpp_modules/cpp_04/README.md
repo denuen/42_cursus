@@ -1,4 +1,4 @@
-# cpp_04
+# cpp_04 - Grade: 100/100
 
 Subtype polymorphism, abstract classes and interfaces: the pinnacle of object-oriented programming in C++.
 
