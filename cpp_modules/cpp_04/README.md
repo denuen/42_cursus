@@ -116,7 +116,7 @@ make
 cd ex01
 make
 ./brain
-# Tests deep copy and advanced memory management
+# Tests deep copy and memory management
 ```
 
 ### ex02: Abstract Animal
