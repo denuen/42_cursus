@@ -26,11 +26,25 @@ The project complies with **42 School** coding standards and implements modern C
 
 ## Modules Overview
 
-### cpp_00: Introduction to C++
-### cpp_01: Memory allocation, pointers to members, references, switch statement
-### cpp_02: Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form
-### cpp_03: Inheritance
-### cpp_04: Subtype polymorphism, abstract classes, interfaces
+### cpp_00: Introduction to C++ - Grade 100/100
+
+### cpp_01: Memory allocation, pointers to members, references, switch statement - Grade 100/100
+
+### cpp_02: Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form - Grade 100/100
+
+### cpp_03: Inheritance - Grade 100/100
+
+### cpp_04: Subtype polymorphism, abstract classes, interfaces - Grade 100/100
+
+### cpp_05: Exception handling, forms, and bureaucracy - Not graded yet
+
+### cpp_06: Type conversion, serialization, and RTTI - Not graded yet
+
+### cpp_07: Templates, generic programming, and dynamic arrays - Not graded yet
+
+### cpp_08: STL containers, algorithms, and advanced data structures - Not graded yet
+
+### cpp_09: Real-world data processing, STL, and algorithms - Not graded yet
 
 ---
 
@@ -111,10 +125,31 @@ cpp_modules/
 │   ├── ex01/                  # ScavTrap inheritance
 │   ├── ex02/                  # FragTrap multiple inheritance
 │   └── ex03/                  # DiamondTrap virtual inheritance
-└── cpp_04/                    # Polymorphism
-    ├── ex00/                  # Animal polymorphism
-    ├── ex01/                  # Brain deep copy
-    └── ex02/                  # Abstract Animal class
+├── cpp_04/                    # Polymorphism
+│   ├── ex00/                  # Animal polymorphism
+│   ├── ex01/                  # Brain deep copy
+│   └── ex02/                  # Abstract Animal class
+├── cpp_05/                    # Exception handling, forms, and bureaucracy
+│   ├── ex00/                  # Bureaucrat class and exceptions
+│   ├── ex01/                  # Form signing and validation
+│   ├── ex02/                  # Abstract forms and specialized forms
+│   └── ex03/                  # Intern and dynamic form creation
+├── cpp_06/                    # Type conversion, serialization, and RTTI
+│   ├── ex00/                  # ScalarConverter static class
+│   ├── ex01/                  # Pointer serialization
+│   └── ex02/                  # RTTI and dynamic_cast
+├── cpp_07/                    # Templates and dynamic arrays
+│   ├── ex00/                  # swap, min, max templates
+│   ├── ex01/                  # iter template function
+│   └── ex02/                  # Array template class
+├── cpp_08/                    # STL containers and advanced data structures
+│   ├── ex00/                  # easyfind template function
+│   ├── ex01/                  # Span class for min/max span
+│   └── ex02/                  # MutantStack with iterator support
+└── cpp_09/                    # Real-world data processing and STL
+    ├── ex00/                  # BitcoinExchange: CSV parsing and queries
+    ├── ex01/                  # RPN: Reverse Polish Notation calculator
+    └── ex02/                  # PmergeMe: Sorting and benchmarking (Ford-Johnson algorithm)
 ```
 
 ---
