@@ -24,13 +24,15 @@ STL containers, algorithms, and real-world data processing in C++.
 `cpp_09` explores advanced use of STL containers, algorithms, and real-world data processing. The module demonstrates how to parse, store, and process data efficiently using C++ standard library features and custom classes. 
 
 ### Container Choice Rationale
-The subject required using STL containers without repetition, one per exercise, except for the PmergeMe class which required at least two containers for performance comparison. The choices made are explained as follows:
-	•	std::map was selected for its ability to efficiently map key-value pairs, making it the most suitable choice for the BitcoinExchange exercise.
-	•	std::stack was selected for the RPN evaluator because expressions in Reverse Polish Notation naturally follow a LIFO logic, which directly maps to stack operations.
-	•	std::vector was selected for its random-access efficiency, enabling the direct use of std::sort and std::lower_bound.
-	•	std::list was selected to contrast with vector, emphasizing sequential access and constant-time insertion, which required implementing a custom ordered insertion routine.
 
-In this module, i tested another formatting approach: instead of following my custom style character by character, i used the clang automatic formatter with some customized command settings. This is a personal experiment to try to improve readability.
+The subject required using STL containers without repetition, one per exercise, except for the `PmergeMe` class which required at least two containers for performance comparison. The choices made are explained as follows:
+
+- **`std::map`** was selected for its ability to efficiently map key-value pairs, making it the most suitable choice for the `BitcoinExchange` exercise.  
+- **`std::stack`** was selected for the RPN evaluator because expressions in Reverse Polish Notation naturally follow a LIFO logic, which directly maps to stack operations.  
+- **`std::vector`** was selected for its random-access efficiency, enabling the direct use of `std::sort` and `std::lower_bound`.  
+- **`std::list`** was selected to contrast with `vector`, emphasizing sequential access and constant-time insertion, which required implementing a custom ordered insertion routine.  
+
+In this module, I tested another formatting approach: instead of following my custom style character by character, I used the clang automatic formatter with some customized command settings. This is a personal experiment to try to improve readability.
 
 ---
 
