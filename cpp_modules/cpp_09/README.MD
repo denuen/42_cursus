@@ -23,7 +23,7 @@ STL containers, algorithms, and real-world data processing in C++.
 
 `cpp_09` explores advanced use of STL containers, algorithms, and real-world data processing. The module demonstrates how to parse, store, and process data efficiently using C++ standard library features and custom classes. 
 
-###Container Choice Rationale
+### Container Choice Rationale
 The subject required using STL containers without repetition, one per exercise, except for the PmergeMe class which required at least two containers for performance comparison. The choices made are explained as follows:
 	•	std::map was selected for its ability to efficiently map key-value pairs, making it the most suitable choice for the BitcoinExchange exercise.
 	•	std::stack was selected for the RPN evaluator because expressions in Reverse Polish Notation naturally follow a LIFO logic, which directly maps to stack operations.
