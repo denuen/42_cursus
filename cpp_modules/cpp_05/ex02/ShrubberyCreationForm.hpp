@@ -6,16 +6,16 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:43:52 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:43:53 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:21:56 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBERRYCREATIONFORM_HPP
-#define SHRUBERRYCREATIONFORM_HPP
+#ifndef ShrubberyCreationForm_HPP
+#define ShrubberyCreationForm_HPP
 
 #include "AForm.hpp"
 
-class ShruberryCreationForm : public AForm {
+class ShrubberyCreationForm : public AForm {
 
 	private:
 		std::string			target;
@@ -25,11 +25,11 @@ class ShruberryCreationForm : public AForm {
 		static const int	REQUIRED_SIGN_GRADE = 145;
 		static const int	REQUIRED_EXEC_GRADE = 137;
 
-		ShruberryCreationForm();
-		ShruberryCreationForm(const ShruberryCreationForm& s);
-		ShruberryCreationForm&	operator=(const ShruberryCreationForm& s);
+		ShrubberyCreationForm();
+		ShrubberyCreationForm(const ShrubberyCreationForm& s);
+		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& s);
 	public:
-		ShruberryCreationForm(const std::string& target, const std::string& formName);
+		ShrubberyCreationForm(std::string target, const std::string& formName);
 
 		inline int			getRequiredSignGrade() const { return (REQUIRED_SIGN_GRADE); }
 		inline int			getRequiredExecGrade() const { return(REQUIRED_EXEC_GRADE); }
@@ -38,7 +38,7 @@ class ShruberryCreationForm : public AForm {
 
 		virtual void		execute(Bureaucrat const & executor) const;
 
-		~ShruberryCreationForm();
+		~ShrubberyCreationForm();
 };
 
 

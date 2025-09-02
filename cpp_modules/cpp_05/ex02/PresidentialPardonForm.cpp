@@ -6,14 +6,14 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:43:41 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:43:42 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:14:48 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 #include <fstream>
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string& target, const std::string& formName) :
+PresidentialPardonForm::PresidentialPardonForm(std::string target, const std::string& formName) :
 AForm(formName, REQUIRED_SIGN_GRADE, REQUIRED_EXEC_GRADE), target(target), isTargetPresent(false) {
 
 	if (target.size() == 0) {
@@ -23,7 +23,7 @@ AForm(formName, REQUIRED_SIGN_GRADE, REQUIRED_EXEC_GRADE), target(target), isTar
 
 	std::ifstream	test;
 
-	test.open(target);
+	test.open(target.c_str());
 	if (test.good()) {
 		isTargetPresent = true;
 	}

@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:43:48 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:43:49 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:29:48 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ class RobotomyRequestForm : public AForm {
 	private:
 		const std::string			target;
 
-		bool						isTargetPresent;
-
 		static const int			REQUIRED_SIGN_GRADE = 72;
 		static const int			REQUIRED_EXEC_GRADE = 45;
 
@@ -29,7 +27,7 @@ class RobotomyRequestForm : public AForm {
 		RobotomyRequestForm(const RobotomyRequestForm& r);
 
 	public:
-		RobotomyRequestForm(const std::string& target, const std::string& formName);
+		RobotomyRequestForm(std::string target, const std::string& formName);
 
 		inline int		getRequiredSignGrade() const { return (REQUIRED_SIGN_GRADE); }
 		inline int		getRequiredExecGrade() const { return(REQUIRED_EXEC_GRADE); }
