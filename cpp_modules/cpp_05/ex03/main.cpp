@@ -6,19 +6,20 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:44:22 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:44:23 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:35:06 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+#include <cstdlib>
 #include <ctime>
 
 int	main() {
 
-	std::srand(std::time(0));
+	srand(std::time(0));
 
 	try {
-		ShruberryCreationForm	invalidFilename("prova", "");
+		ShrubberyCreationForm	invalidFilename("prova", "");
 	} catch (const std::invalid_argument& e) {
 		std::cerr << e.what() << std::endl;
 	}
@@ -26,7 +27,7 @@ int	main() {
 	std::cout << "-----------------------------" << std::endl;
 
 	try {
-		ShruberryCreationForm	invalidFilename("", "prova");
+		ShrubberyCreationForm	invalidFilename("", "prova");
 	} catch (const std::invalid_argument& e) {
 		std::cerr << e.what() << std::endl;
 	}
@@ -34,9 +35,9 @@ int	main() {
 	std::cout << "-----------------------------" << std::endl;
 
 	try {
-		ShruberryCreationForm	s("prova", "bombocrat");
-		RobotomyRequestForm		r("prova", "bombocrat");
-		Bureaucrat				b("Filippo", 170);
+		ShrubberyCreationForm	s("prova", "bombocrat");
+		RobotomyRequestForm		r("prova_shrubbery", "bombocrat");
+		Bureaucrat				b("Filippo", 45);
 
 		s.beSigned(b);
 		r.beSigned(b);

@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:44:31 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:44:32 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:21:56 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Bureaucrat.hpp"
 #include <fstream>
 
-ShruberryCreationForm::ShruberryCreationForm(const std::string& newTarget, const std::string& formName) :
+ShrubberyCreationForm::ShrubberyCreationForm(std::string newTarget, const std::string& formName) :
 AForm(formName, REQUIRED_SIGN_GRADE, REQUIRED_EXEC_GRADE), target(newTarget), isTargetPresent(false) {
 
 	if (target.size() == 0) {
@@ -24,7 +24,7 @@ AForm(formName, REQUIRED_SIGN_GRADE, REQUIRED_EXEC_GRADE), target(newTarget), is
 
 	std::ifstream	test;
 
-	test.open(target);
+	test.open(target.c_str());
 	if (test.good()) {
 		isTargetPresent = true;
 	}
@@ -32,7 +32,7 @@ AForm(formName, REQUIRED_SIGN_GRADE, REQUIRED_EXEC_GRADE), target(newTarget), is
 
 }
 
-void	ShruberryCreationForm::execute(Bureaucrat const& executor) const {
+void	ShrubberyCreationForm::execute(Bureaucrat const& executor) const {
 
 	if (!this->getIsSigned()) {
 		throw NotSignedException();
@@ -45,7 +45,7 @@ void	ShruberryCreationForm::execute(Bureaucrat const& executor) const {
 
 		std::ofstream	output;
 
-		output.open(target + "_shrubbery", std::ios::app);
+		output.open((target + "_shrubbery").c_str(), std::ios::app);
 
 		output << "      *        " << std::endl;
 		output << "     ***       " << std::endl;
@@ -66,6 +66,6 @@ void	ShruberryCreationForm::execute(Bureaucrat const& executor) const {
 
 }
 
-ShruberryCreationForm::~ShruberryCreationForm() {
+ShrubberyCreationForm::~ShrubberyCreationForm() {
 
 }

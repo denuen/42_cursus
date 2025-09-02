@@ -6,14 +6,14 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:44:18 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/14 10:35:04 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:21:56 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
 static AForm*	createShrubberyForm(const std::string& target) {
-	return (new ShruberryCreationForm(target, target + "form"));
+	return (new ShrubberyCreationForm(target, target + "form"));
 }
 
 static AForm*	createRobotomyForm(const std::string& target) {
