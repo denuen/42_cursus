@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:41:57 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:41:58 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 08:58:14 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ class Bureaucrat {
 		inline std::string	getName() const { return (name); }
 		inline int			getGrade() const { return(grade); }
 
-		void						incrementGrade();
-		void						decrementGrade();
+		void				incrementGrade();
+		void				decrementGrade();
 
 		class GradeTooHighException : public std::exception {
 

@@ -6,7 +6,7 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:41:59 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/08 15:42:00 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/02 09:02:12 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,23 @@ int	main() {
 		std::cerr << "Caught GradeTooHighException: " << e.what() << std::endl;
 	}
 
+	try {
+		Bureaucrat invalidIncr("Bob", 4);
+		for (int i = 0; i < 4; i++) {
+			invalidIncr.incrementGrade();
+			std::cout << invalidIncr << std::endl;
+		}
+	} catch (const Bureaucrat::GradeTooHighException& e) {
+		std::cerr << "Caught GradeTooHighException: " << e.what() << std::endl;
+	}
+	
+	try {
+		Bureaucrat invalidDecr("Bob", 148);
+		for (int i = 0; i < 4; i++) {
+			invalidDecr.decrementGrade();
+			std::cout << invalidDecr << std::endl;
+		}
+	} catch (const Bureaucrat::GradeTooLowException& e) {
+		std::cerr << "Caught GradeTooLowException: " << e.what() << std::endl;
+	}
 }
