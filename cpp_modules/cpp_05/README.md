@@ -1,4 +1,4 @@
-# cpp_05 - Not graded yet
+# cpp_05 - Grade: 100/100
 
 Exception handling, multiple inheritance, and design patterns: bureaucracy in C++.
 
