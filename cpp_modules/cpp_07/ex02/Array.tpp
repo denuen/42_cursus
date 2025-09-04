@@ -6,17 +6,18 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:41:29 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/14 10:41:30 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/04 09:45:57 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+#include <cstdlib>
 
 template <typename T>
 Array<T>::Array() :
 n(0) {
 
-	buffer = nullptr;
+	buffer = NULL;
 
 }
 
@@ -27,7 +28,7 @@ n(n) {
 	if (n > 0) {
 		buffer = new T[n]();
 	} else {
-		buffer = nullptr;
+		buffer = NULL;
 	}
 
 }
@@ -42,7 +43,7 @@ n(a.n) {
 			buffer[i] = a.buffer[i];
 		}
 	} else {
-		buffer = nullptr;
+		buffer = NULL;
 	}
 
 }
@@ -64,7 +65,7 @@ Array<T>&	Array<T>::operator=(const Array<T>& a) {
 				buffer[i] = a.buffer[i];
 			}
 		} else {
-			buffer = nullptr;
+			buffer = NULL;
 		}
 
 	}
