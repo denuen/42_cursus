@@ -6,11 +6,12 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 15:04:05 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/13 15:04:06 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/04 09:36:43 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
+#include <cstdlib>
 
 uintptr_t Serializer::serialize(Data* ptr) {
 
@@ -23,5 +24,5 @@ Data*	Serializer::deserialize(uintptr_t raw) {
 
 	if (raw != 0x0)
 		return (reinterpret_cast<Data*>(raw));
-	return (nullptr);
+	return (NULL);
 }

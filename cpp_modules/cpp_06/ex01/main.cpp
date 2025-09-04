@@ -6,12 +6,13 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 15:04:00 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/13 15:04:01 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/04 09:38:13 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
 #include <iostream>
+#include <cstdlib>
 
 int	main() {
 
@@ -41,7 +42,7 @@ int	main() {
 
 	Data	*d1_p, *d2_p;
 
-	d1_p = d2_p = nullptr;
+	d1_p = d2_p = NULL;
 
 	d1_p = Serializer::deserialize(u1);
 	d2_p = Serializer::deserialize(u2);
