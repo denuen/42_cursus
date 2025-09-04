@@ -5,6 +5,8 @@
 #include <iostream>
 #include <set>
 #include <sstream>
+#include <errno.h>
+#include <limits>
 
 PmergeMe::PmergeMe() : vec(), lst(), vecTime(0.0), listTime(0.0) {
 }
