@@ -6,13 +6,14 @@
 /*   By: apintaur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:41:24 by apintaur          #+#    #+#             */
-/*   Updated: 2025/08/14 10:41:25 by apintaur         ###   ########.fr       */
+/*   Updated: 2025/09/04 09:44:55 by apintaur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 template <typename T>
 void	printElement(const T& element) {
@@ -22,6 +23,12 @@ void	printElement(const T& element) {
 template <typename T>
 void	increment(T& element) {
 	++element;
+}
+
+static std::string	intToStr(long long n) {
+	std::ostringstream	oss;
+	oss << n;
+	return (oss.str());
 }
 
 int	main() {
@@ -59,7 +66,7 @@ int	main() {
 
 	std::string* strArr = new std::string[SIZE];
 	for (int i = 0; i < SIZE; ++i) {
-		strArr[i] = "Item" + std::to_string(i+1);
+		strArr[i] = "Item" + intToStr(i+1);
 	}
 
 	std::cout << "--- Testing string array ---" << std::endl;
