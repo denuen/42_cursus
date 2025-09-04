@@ -3,12 +3,20 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <cstdlib>
+#include <limits>
+
+static std::string	intToStr(long double n) {
+	std::ostringstream	oss;
+	oss << n;
+	return (oss.str());
+}
 
 BitcoinExchange::BitcoinExchange() : filename("data.csv") {
 
 	std::ifstream myFile;
 
-	myFile.open(filename);
+	myFile.open(filename.c_str());
 	if (!myFile) {
 		throw BadFile();
 	}
@@ -54,7 +62,7 @@ BitcoinExchange::BitcoinExchange(const std::string& filename)
 	} else {
 		std::ifstream myFile;
 
-		myFile.open(filename);
+		myFile.open(filename.c_str());
 		if (!myFile) {
 			throw BadFile();
 		}
@@ -138,7 +146,7 @@ void BitcoinExchange::load(const std::string& filename) {
 	} else {
 		std::ifstream myFile;
 
-		myFile.open(filename);
+		myFile.open(filename.c_str());
 		if (!myFile) {
 			throw BadFile();
 		}
@@ -169,7 +177,7 @@ void BitcoinExchange::load(const std::string& filename) {
 
 				if (value < 0.0f || value > 1000.0f) {
 					throw BadData("Value out of range: "
-								  + std::to_string(value));
+								  + intToStr(value));
 				}
 
 				std::map<std::string, float>::iterator it = database.find(date);
@@ -271,7 +279,7 @@ void BitcoinExchange::validateValue(const std::string& line, size_t pos,
 		throw BadData(valueStr);
 	}
 
-	char*		endptr	 = nullptr;
+	char*		endptr	 = NULL;
 	long double tmpValue = std::strtold(valueStr.c_str(), &endptr);
 
 	if (endptr == valueStr.c_str()
