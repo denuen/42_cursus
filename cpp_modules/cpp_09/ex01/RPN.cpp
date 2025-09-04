@@ -1,4 +1,5 @@
 #include "RPN.hpp"
+#include <cstdlib>
 #include <sstream>
 
 const char* Rpn::OPERATION_TOKENS[OPERATION_COUNT] = {"+", "-", "/", "*"};
@@ -75,7 +76,7 @@ void Rpn::compute(std::string& input) {
 
 	while (iss >> token) {
 		if (token.size() == 1 && token[0] >= '0' && token[0] <= '9') {
-			stack.push(std::stoi(token));
+			stack.push(token[0] - '0');
 		} else {
 			if (stack.size() < 2) {
 				throw CalculationFailed();
