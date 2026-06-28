@@ -1,4 +1,4 @@
-# cpp_07 - Not graded yet
+# cpp_07 - Grade 100/100
 
 Templates, generic programming, and dynamic arrays in C++.
 

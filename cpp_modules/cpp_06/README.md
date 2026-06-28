@@ -1,4 +1,4 @@
-# cpp_06 - Not graded yet
+# cpp_06 - Grade 100/100
 
 Type conversion, serialization, and runtime type identification in C++.
 

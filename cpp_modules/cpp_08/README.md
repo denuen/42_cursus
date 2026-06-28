@@ -1,4 +1,4 @@
-# cpp_08 - Not graded yet
+# cpp_08 - Grade 100/100
 
 Templates, STL containers, and advanced data structures in C++.
 
