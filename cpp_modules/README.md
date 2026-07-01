@@ -36,15 +36,15 @@ The project complies with **42 School** coding standards and implements modern C
 
 ### cpp_04: Subtype polymorphism, abstract classes, interfaces - Grade 100/100
 
-### cpp_05: Exception handling, forms, and bureaucracy - Not graded yet
+### cpp_05: Exception handling, forms, and bureaucracy - Grade 100/100
 
-### cpp_06: Type conversion, serialization, and RTTI - Not graded yet
+### cpp_06: Type conversion, serialization, and RTTI - Grade 100/100
 
-### cpp_07: Templates, generic programming, and dynamic arrays - Not graded yet
+### cpp_07: Templates, generic programming, and dynamic arrays - Grade 100/100
 
-### cpp_08: STL containers, algorithms, and advanced data structures - Not graded yet
+### cpp_08: STL containers, algorithms, and advanced data structures - Grade 100/100
 
-### cpp_09: Real-world data processing, STL, and algorithms - Not graded yet
+### cpp_09: Real-world data processing, STL, and algorithms - Grade 100/100
 
 ---
 
